@@ -11,3 +11,109 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.flex-row{
+  flex-direction:row;
+  display:flex;
+  padding:5px ;
+  background-color: Transparent; 
+  border-style: none;      
+  outline: none;   
+  justify-content: center;
+}
+.navbar-btn{
+  color: red;
+  padding: 5px;
+  background-color: Transparent; 
+  border-style: none;      
+  outline: none;   
+}
+
+ul {
+  list-style: none;    /* 去除ul前面的小點 */
+}
+
+
+/*輪播圖模塊*/
+.carousel {
+  width: 990px;
+  height: 440px;
+  margin: 100px auto;
+  /*border: 1px solid #ddd;*/
+  border-radius: 10px;
+  position: relative;
+}
+
+/*輪播圖大小*/
+.carousel img {
+  display: none;
+  width: 990px;
+  height: 440px;
+  cursor: pointer;
+}
+
+/*顯示輪播圖*/
+img.active {
+  display: block;
+}
+
+/*輪播標識模塊*/
+.circle ul {
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -75px;
+}
+
+/*輪播小點*/
+li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 5px 8px;
+  float: left;
+  background: rgba(125, 125, 151, .3);
+  cursor: pointer;
+}
+
+/*激活小點*/
+li.active {
+  width: 19px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/*箭頭*/
+.arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  z-index: 99;
+  display: none;
+  width: 30px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+/*左箭頭*/
+.arrow-l {
+  left: 0;
+}
+
+/*右箭頭*/
+.arrow-r {
+  right: 0;
+}
+
+/*箭頭懸浮*/
+.arrow:hover {
+  background-color: rgba(0, 0, 0, .7);
+}
