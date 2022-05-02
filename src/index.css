@@ -31,3 +31,59 @@ code {
 /* .vert{
   padding: 5px;
 } */
+
+.list{
+  width: 3000px;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+}
+
+.category{
+  width: 70vw;
+  
+  margin:  auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.group{
+  box-sizing: border-box;
+}
+.vert-photo-text{
+  text-decoration:none;
+  box-sizing: border-box;
+  border-style:solid;
+  border-color: #d3d3d3; 
+  border-width:1px;
+}
+.photo-text{
+  text-decoration: none ;
+  color: black;
+}
+.list-photo{
+  box-sizing: border-box;
+  
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.all_category{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.flex_title{
+  background-color: white;
+  margin:  auto;
+  width: 70vw;
+  display: flex;
+  border-style:solid;
+  border-bottom: #d3d3d3; 
+  border-top: #cc0e0e;
+  border-right: white;
+  border-left: white;
+  justify-content: center;
+}

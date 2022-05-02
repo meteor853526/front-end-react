@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import $ from "jquery";
+
 const Car = () => {
     return ( 
         <div class="flex-row">
@@ -45,6 +46,7 @@ const Car = () => {
                 <img src={require('./img/cat_4.jpg')} class="d-block w-100" alt="..."/>
                 <img src={require('./img/cat_5.jpg')} class="d-block w-100" alt="..."/>
             </div>
+            
         </div>
 
         
