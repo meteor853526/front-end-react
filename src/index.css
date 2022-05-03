@@ -87,3 +87,26 @@ img {
   border-left: white;
   justify-content: center;
 }
+.book{
+   height: 14.7vh;
+   width: 14.7vh;
+}
+.work{
+  height: 14.6vh;
+  width: 14.7vh;
+}
+.computer{
+  height: 14.7vh;
+  width: 14.7vh;
+}
+.vert{
+  display: flex;
+  flex-direction: column;
+  padding:1px ;
+}
+.nav-link{
+  color:white !important;
+}
+.navbar-brand{
+  color:white !important;
+}

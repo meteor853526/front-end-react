@@ -8,7 +8,7 @@ const styles = {
 const NavBar = () => {
     return ( 
         
-        <div class="container-fluid">
+        <div class="container-fluid" style={{backgroundColor: "#FF6100"}}>
             <div class="flex-row">
                 <ul class="nav">
                     <li class="nav-item">

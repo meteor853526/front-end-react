@@ -21,7 +21,7 @@ function App() {
       <NavBar />
         {/* <NavBar_2 /> */}
         <Car />
-          <div className="" style={{backgroundColor:"#d3d3d3"}}>
+          <div className="" style={{backgroundColor:"#c7c7c7"}}>
             <Category />
           </div>
           
