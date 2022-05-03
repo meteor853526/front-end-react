@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from './img/文具.svg';
+
 const Card = () => {
     return ( 
         <div class="container">
@@ -36,7 +36,7 @@ const Card = () => {
                 </div>
             </div>
             <div class="">
-                <img src={require('./img/文具.svg')} alt="Background"/>
+               
             </div>
         </div>
         

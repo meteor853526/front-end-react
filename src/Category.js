@@ -1,20 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from './img/文具.svg';
-import girls from './img/女生衣著.svg';
-import boys from './img/男生衣著.svg';
-import sport from './img/運動鞋.svg'
-import glass from './img/眼鏡.svg'
-import pen from './img/文具.svg'
-import workthing from './img/上班族用品.svg'
-import homething from './img/居家小物.svg'
-import climb from './img/爬山用具.svg'
-import shot from './img/相機.svg'
-import travle from './img/旅行用品.svg'
-import book from './img/書本.svg'
-import sportthing from './img/運動配件.svg'
-import computer from './img/電腦.svg'
-import work from './img/辦公用品.svg'
-import enjoy from './img/露營用品.svg'
+
 const Category = () => {
     return ( 
       <div className="all_category">
@@ -30,11 +15,11 @@ const Category = () => {
                   <a className="photo-text" href="/#">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={girls} alt="Background" />
+                          <img src={require('./img/女性服裝.png')} alt="Background" />
                       </div>
                       <div className="list-text" >
                           <font className="list-sub" >
-                                女姓衣著
+                                女生衣著
                           </font>
                       </div>
                     </div>
@@ -42,11 +27,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img className="book"src={book} alt="Background"/>
+                          <img src={require('./img/書籍及雜誌期刊.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            書本
+                            書籍及雜誌期刊
                       </font>
                       </div>
                     </div>
@@ -58,11 +43,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={boys} alt="Background"/>
+                          <img src={require('./img/男生衣著.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                          男性衣著
+                          男生衣著
                           </font>
                       </div>
                     </div>
@@ -70,11 +55,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={homething} alt="Background"/>
+                          <img src={require('./img/居家生活.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            居家小物
+                            居家生活
                       </font>
                       </div>
                     </div>
@@ -86,11 +71,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={sport} alt="Background"/>
+                          <img src={require('./img/運動健身.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                運動鞋
+                                運動/健身
                           </font>
                       </div>
                     </div>
@@ -98,11 +83,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/美食伴手禮.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            文具
+                            美食/伴手禮
                       </font>
                       </div>
                     </div>
@@ -114,11 +99,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={climb} alt="Background"/>
+                          <img src={require('./img/男女鞋.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                登山用具
+                                男女鞋
                           </font>
                       </div>
                     </div>
@@ -126,11 +111,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={shot} alt="Background"/>
+                          <img src={require('./img/汽機車零件百貨.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            相機
+                            汽機車零件百貨
                       </font>
                       </div>
                     </div>
@@ -142,11 +127,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={travle} alt="Background"/>
+                          <img src={require('./img/女生配件.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                旅行用品
+                                女生配件/黃金
                           </font>
                       </div>
                     </div>
@@ -154,11 +139,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={workthing} alt="Background"/>
+                          <img src={require('./img/遊戲王.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            上班族用品
+                            遊戲王
                       </font>
                       </div>
                     </div>
@@ -170,11 +155,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img className="computer"src={computer} alt="Background"/>
+                          <img src={require('./img/美妝.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                電腦配件
+                                美妝
                           </font>
                       </div>
                     </div>
@@ -182,11 +167,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img className="work" src={work} alt="Background"/>
+                          <img src={require('./img/娛樂收藏.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            辦公用品
+                            娛樂收藏
                       </font>
                       </div>
                     </div>
@@ -198,11 +183,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/嬰幼童與母親.jpg')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                文具
+                                嬰幼童與母親
                           </font>
                       </div>
                     </div>
@@ -210,11 +195,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/寵物.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            文具
+                            寵物
                       </font>
                       </div>
                     </div>
@@ -226,11 +211,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/女生包包精品.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                文具
+                                女生包包/精品
                           </font>
                       </div>
                     </div>
@@ -238,11 +223,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/手機平板與周邊.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            文具
+                            手機平板與周邊
                       </font>
                       </div>
                     </div>
@@ -254,11 +239,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/男生包包與配件.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                文具
+                                男生包包與配件
                           </font>
                       </div>
                     </div>
@@ -266,11 +251,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/3c與筆電.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            文具
+                            3C與筆電
                       </font>
                       </div>
                     </div>
@@ -282,11 +267,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/旅行戶外.png')} alt="Background"/>
                       </div>
                       <div className="list-text">
                           <font className="">
-                                文具
+                                旅行/戶外
                           </font>
                       </div>
                     </div>
@@ -294,11 +279,11 @@ const Category = () => {
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">
-                          <img src={logo} alt="Background"/>
+                          <img src={require('./img/家電影音.png')} alt="Background"/>
                       </div>
                           <div className="list-text">
                       <font className="">
-                            文具
+                            家電影音
                       </font>
                       </div>
                     </div>

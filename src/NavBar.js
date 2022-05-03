@@ -12,7 +12,7 @@ const NavBar = () => {
             <div class="flex-row">
                 <ul class="nav">
                     <li class="nav-item">
-                        <Link class="nav-link active" aria-current="page" to="#">Active</Link>
+                        <Link class="nav-link active" aria-current="page" to="#">賣家中心</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" to="#">Link</Link>
@@ -27,10 +27,10 @@ const NavBar = () => {
             </div>
             <div class="flex-row">
                 
-                <Link to="#" class="navbar-brand">Navbar</Link>
+                <Link to="#" class="navbar-brand">購物網</Link>
                 <div class="">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{ "width" : "700px"}}></input>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{ "width" : "100vh"}}></input>
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
 

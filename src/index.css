@@ -40,7 +40,7 @@ code {
 }
 
 .category{
-  width: 70vw;
+  width: 80vw;
   
   margin:  auto;
   display: flex;
@@ -57,6 +57,11 @@ code {
   border-style:solid;
   border-color: #d3d3d3; 
   border-width:1px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  
 }
 .photo-text{
   text-decoration: none ;
@@ -64,7 +69,8 @@ code {
 }
 .list-photo{
   box-sizing: border-box;
-  
+  width: 8vw;
+  height: 15vh;
 }
 img {
   max-width: 100%;
@@ -78,27 +84,22 @@ img {
 .flex_title{
   background-color: white;
   margin:  auto;
-  width: 70vw;
+  width: 81vw;
+  height: 10vh;
   display: flex;
   border-style:solid;
-  border-bottom: #d3d3d3; 
+  border-bottom: #fdfafa; 
   border-top: #cc0e0e;
   border-right: white;
   border-left: white;
   justify-content: center;
 }
-.book{
-   height: 14.7vh;
-   width: 14.7vh;
+.title{
+  display: flex;
+  justify-content: Transparent;
+  align-items: flex-start
 }
-.work{
-  height: 14.6vh;
-  width: 14.7vh;
-}
-.computer{
-  height: 14.7vh;
-  width: 14.7vh;
-}
+
 .vert{
   display: flex;
   flex-direction: column;
