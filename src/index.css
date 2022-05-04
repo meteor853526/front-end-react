@@ -120,4 +120,17 @@ img {
 .content{
   display: flex;
   justify-content:center;
+  text-align:start;
+}
+.side-flex{
+  display: flex;
+  justify-content:flex-start;
+
+}
+.list_category_flex{
+  display: flex;
+  flex-direction: column;
+}
+.side{
+  border-bottom:3px black solid;
 }
