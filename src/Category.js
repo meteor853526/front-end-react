@@ -12,7 +12,7 @@ const Category = () => {
               <ul class="category">
               <li className="list">
                 <div className="group">
-                  <a className="photo-text" href="/#">
+                  <Link to="/product" className="photo-text">
                     <div className="vert-photo-text">
                       <div className="list-photo">
                           <img src={require('./img/女性服裝.png')} alt="Background" />
@@ -23,7 +23,7 @@ const Category = () => {
                           </font>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <a className="photo-text" href="..">
                     <div className="vert-photo-text">
                       <div className="list-photo">

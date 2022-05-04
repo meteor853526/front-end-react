@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import $ from "jquery";
-
+import Category from './Category';
 const Car = () => {
     return ( 
+    <div className="" style={{backgroundColor:"#fdfafa"}}>
+
+    
         <div class="flex-row">
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -48,7 +51,8 @@ const Car = () => {
             </div>
             
         </div>
-
+        <Category/>               
+    </div>
         
         // <div class="wrap">
         //     <div class="carousel">

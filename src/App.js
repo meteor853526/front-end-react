@@ -5,12 +5,14 @@ import NavBar_2 from './NavBar_2';
 import Card from './Card';
 import Car from './Car';
 import Category from './Category';
+import Content from './Content';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -20,10 +22,18 @@ function App() {
       <div className="App">
       <NavBar />
         {/* <NavBar_2 /> */}
-        <Car />
-          <div className="" style={{backgroundColor:"#fdfafa"}}>
-            <Category />
-          </div>
+      <div className="content">
+          <Routes>
+          
+            <Route path="/" element={<Car/>}/>
+            <Route path="/product" element={<Content/>}/>
+
+            
+
+          </Routes>
+      </div>
+        
+        
           
 
       

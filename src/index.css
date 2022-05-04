@@ -111,3 +111,13 @@ img {
 .navbar-brand{
   color:white !important;
 }
+
+.product_body{
+  display: flex;
+  justify-content:center;
+  flex-flow: row wrap;
+}
+.content{
+  display: flex;
+  justify-content:center;
+}
