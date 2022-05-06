@@ -6,7 +6,7 @@ import Card from './Card';
 import Car from './Car';
 import Category from './Category';
 import Content from './Content';
-import ContentComponent from './components/ContentComponent.js'
+import ContentComponent from './components/Content_Component.js'
 import {
   BrowserRouter as Router,
   Routes,

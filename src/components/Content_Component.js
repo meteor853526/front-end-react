@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import React from 'react';
 import testservice from '../services/testservice';
+import ProductComponent from './ProductComponent.js';
 
 
-
-function ContentComponent() {
+function Content_Component() {
 
     const [id, setid] = useState([])
 
@@ -127,12 +127,7 @@ function ContentComponent() {
 
                     
                     <div className="col-9">
-                        {
-                            id.map(
-                                id => 
-                                <h1>{id.id}</h1>
-                            )
-                        }
+                        <ProductComponent />
                     </div>
                     
                 </div>
@@ -143,4 +138,4 @@ function ContentComponent() {
     );
 }
  
-export default ContentComponent;
+export default Content_Component;
