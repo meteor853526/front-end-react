@@ -7,6 +7,7 @@ import Car from './Car';
 import Category from './Category';
 import Content from './Content';
 import ContentComponent from './components/Content_Component.js'
+import AddProduct from './components/AddProduct.js'
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,6 +29,7 @@ function App() {
           
             <Route path="/" element={<Car/>}/>
             <Route path="/product" element={<ContentComponent/>}/>
+            <Route path="/AddProduct" element={<AddProduct/>}/>
 
             
 

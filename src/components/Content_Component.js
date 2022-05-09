@@ -122,9 +122,9 @@ function Content_Component() {
                             </div>
                             
                         </div>
-                        
+                        <Link to="/AddProduct" className="btn1"><button className="btn1">增加</button></Link>
                     </div>
-
+                    
                     
                     <div className="col-9">
                         <ProductComponent />
