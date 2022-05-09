@@ -1,5 +1,5 @@
 import axios from 'axios';
-const api = 'http://localhost:8080/api/v1/student';
+const api = 'http://localhost:8080/api/v1/product';
 
 class testservice{
     
