@@ -20,30 +20,30 @@ function Product_component() {
         })
     }
     return ( 
-        <div>
+        <div className="product_row">
             {
                 id.map(
                     
                     id => 
-                        <div className="container" style={{width:"20vw",display="flex"}}>
-                        <div className="row">
-                            <div className="col">
-                            <div className="card" >
-                                {/* <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:100, height:100}} resizeMode="cover" alt=""/> */}
-                                <div className="card-body">
-                                    <h5 className="card-title">{id.id} {id.name}</h5>
-                                    <p className="card-text">{id.price}</p>
-                                    <p className="card-text">{id.introduce}</p>
-                                    <p className="card-text">{id.type}</p>
-                                    <p className="card-text">{id.number}</p>
+                        <div className="container product_container" >
+                            <div className="row product_row">
+                                <div className="col">
+                                <div className="card" >
+                                    {/* <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:100, height:100}} resizeMode="cover" alt=""/> */}
+                                    <div className="card-body">
+                                        <h5 className="card-title">{id.id} {id.name}</h5>
+                                        <p className="card-text">{id.price}</p>
+                                        <p className="card-text">{id.introduce}</p>
+                                        <p className="card-text">{id.type}</p>
+                                        <p className="card-text">{id.number}</p>
 
-                                    <Link to="#" className="btn1"><button className="btn1">Sign in</button></Link>
+                                        <Link to="#" className="btn1"><button className="btn1">Sign in</button></Link>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
+                                
+                                
                             </div>
-                            
-                            
-                        </div>
                         <div className="">
                         
                         </div>

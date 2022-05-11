@@ -134,3 +134,21 @@ img {
 .side{
   border-bottom:3px black solid;
 }
+.product_container{
+  display: flex;
+  width: 25vw;
+  height: 50vh;
+  flex-flow: row wrap;
+  padding:0;
+}
+/* .row{
+  display: flex;
+  width: 30vw;
+  flex-flow: row wrap;
+} */
+.product_row{
+  display: flex;
+  width: 30vw;
+  flex-wrap: wrap;
+  flex-direction:row;
+}

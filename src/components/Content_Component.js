@@ -126,8 +126,11 @@ function Content_Component() {
                     </div>
                     
                     
-                    <div className="col-9">
-                        <ProductComponent />
+                    <div className="col-9 ">
+                        <div className="">
+                            <ProductComponent className=""/>
+                        </div>
+                        
                     </div>
                     
                 </div>
