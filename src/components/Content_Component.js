@@ -34,7 +34,7 @@ function Content_Component() {
         <div className="product_body" style={{width:"80vw"}}>
             <div className="container-fluid">
                 <div className="row side-flex">
-                    <div className="col-3">
+                    <div className="col-2">
                         <div className="list_category_flex side">
                             <button type="button" className="side col">所有分類</button>
                             <div className="list_category_flex">
@@ -126,9 +126,9 @@ function Content_Component() {
                     </div>
                     
                     
-                    <div className="col-9 ">
+                    <div className="col-10 ">
                         <div className="">
-                            <ProductComponent className=""/>
+                            <ProductComponent className="row_product"/>
                         </div>
                         
                     </div>

@@ -136,10 +136,12 @@ img {
 }
 .product_container{
   display: flex;
-  width: 25vw;
-  height: 50vh;
-  flex-flow: row wrap;
-  padding:0;
+  width: 15vw;
+  height: 30vh;
+  flex-flow: wrap;
+  
+ 
+  padding:5px;
 }
 /* .row{
   display: flex;
@@ -149,6 +151,12 @@ img {
 .product_row{
   display: flex;
   width: 30vw;
-  flex-wrap: wrap;
-  flex-direction:row;
+  height: 30vh;
+  flex-flow: wrap;
+  
+}
+.row_product{
+  display: flex;
+  align-items: flex-start;
+  flex-flow: wrap;
 }

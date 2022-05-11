@@ -20,12 +20,12 @@ function Product_component() {
         })
     }
     return ( 
-        <div className="product_row">
+        <div className="row_product">
             {
                 id.map(
                     
                     id => 
-                        <div className="container product_container" >
+                        <div className="product_container" >
                             <div className="row product_row">
                                 <div className="col">
                                 <div className="card" >
@@ -33,8 +33,8 @@ function Product_component() {
                                     <div className="card-body">
                                         <h5 className="card-title">{id.id} {id.name}</h5>
                                         <p className="card-text">{id.price}</p>
-                                        <p className="card-text">{id.introduce}</p>
-                                        <p className="card-text">{id.type}</p>
+                                        <p className="card-text">{id.introduce}{id.type}</p>
+                                       
                                         <p className="card-text">{id.number}</p>
 
                                         <Link to="#" className="btn1"><button className="btn1">Sign in</button></Link>
