@@ -16,14 +16,14 @@ const UserReducer=(state=initialState, action)=>{
                 return {
                     isFetch:false,
                     isError:false,
-                    user:"PASS",
+                    user:action.payload.email,
                 };
                 case  "FAILED_LOGIN":
                     return {
-                    user:"FALL",
+                    user:null,
                     isFetch:false,
-                    isError:action.payload,
-                    };
+                    isError:action.payload.email,
+                };
               default: return state;
     }
 
