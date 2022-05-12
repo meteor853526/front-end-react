@@ -28,17 +28,23 @@ function App() {
       <header className="App-header">
 
       <Router>
-      
-        <Routes>
-            <Route path="/" element={state.user ? <Home/> : <Login/>}>
-            {/* {users ? <Home/> : <Login/>} 
-            {state.user ? <Home/> : <Login/> } */}
-            </Route>
-            <Route path="/Register"element={<Register/>} >
-              
-               
-            </Route>
-        </Routes>
+        <NavBar />
+        <div className="content">
+          <Routes>
+              <Route path="/" element={<Car/>}/>
+              <Route path="/product" element={<ContentComponent/>}/>
+              <Route path="/AddProduct" element={<AddProduct/>}/>
+
+              <Route path="/login" element={state.user ? <Home/> : <Login/>}>
+              {/* {users ? <Home/> : <Login/>} 
+              {state.user ? <Home/> : <Login/> } */}
+              </Route>
+              <Route path="/Register"element={<Register/>} >
+                
+                
+              </Route>
+          </Routes>
+        </div>
       </Router>
 
       </header>
