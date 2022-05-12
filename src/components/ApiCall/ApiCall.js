@@ -36,7 +36,7 @@ dispatch(startlogin());
         })
         .then(function (res) {
             console.log(res);
-
+            dispatch(successlogin(userCredentials));
         })
         .catch(function (error) {
             console.log(error);
@@ -46,7 +46,7 @@ dispatch(startlogin());
 
        
 
-        dispatch(successlogin(userCredentials));
+        
         
         
     } catch (error) {
