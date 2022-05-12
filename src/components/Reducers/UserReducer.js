@@ -16,11 +16,11 @@ const UserReducer=(state=initialState, action)=>{
                 return {
                     isFetch:false,
                     isError:false,
-                    user:action.payload,
+                    user:"PASS",
                 };
                 case  "FAILED_LOGIN":
                     return {
-                    user:null,
+                    user:"FALL",
                     isFetch:false,
                     isError:action.payload,
                     };

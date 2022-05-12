@@ -7,6 +7,7 @@ export const startlogin=()=>{
 
 export const successlogin=(user)=>{
     return{
+       
         type:"SUCCESS_LOGIN",
         payload:user
     };

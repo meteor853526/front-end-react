@@ -18,7 +18,9 @@ const handelsubmit=(e)=>{
     axios({
         url: 'http://localhost:8080/api/v1/user/addUser',
         method: "POST",
-        
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded'
+        },
         params:{
             'email':email,
             'passwd':pwd1,

@@ -24,9 +24,9 @@ useEffect(() => {
         initialValue.current=false;
     }
 
-    // return()=>{
-    //     history.push('/');
-    // }
+    return()=>{
+        history('/');
+    }
 }, [state,history])
 
 
@@ -38,10 +38,13 @@ useEffect(() => {
     const handlesubmit= (event)=>{
         event.preventDefault();
       if(emailval!=="" || passval!==""){
-         ApiCall({"email":emailval,"password":passval},dispatch);
+          console.log(emailval + passval )
+         ApiCall({"email":emailval,"passwd":passval},dispatch);
          setemailval("");
          setpassval("");
         }
+
+
   
        
     }
