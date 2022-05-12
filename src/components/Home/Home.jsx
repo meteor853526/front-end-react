@@ -7,7 +7,7 @@ function Home() {
     return (
         <div>
           <h1>{state.user}</h1>
-        <h1>welcomeimg</h1>
+          <h1>welcomeimg</h1>
        
         </div>
     )
