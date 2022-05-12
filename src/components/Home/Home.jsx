@@ -5,8 +5,8 @@ function Home() {
     const state = useSelector(state => state.UserReducer);
     return (
         <div>
-      {state.user.username}
-
+          <h1>{state.user}</h1>
+        <h1>welcomeimg</h1>
       
         </div>
     )

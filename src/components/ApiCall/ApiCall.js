@@ -12,7 +12,7 @@ dispatch(startlogin());
             'content-type': 'application/x-www-form-urlencoded'
         })
         .then(function (response) {
-            console.log(response.data);
+            console.log(response);
             dispatch(successlogin(response));
             
         })

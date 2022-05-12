@@ -24,9 +24,9 @@ useEffect(() => {
         initialValue.current=false;
     }
 
-    return()=>{
-        history('/');
-    }
+    // return()=>{
+    //     history('/');
+    // }
 }, [state,history])
 
 
