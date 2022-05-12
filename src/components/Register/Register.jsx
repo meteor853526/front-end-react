@@ -3,6 +3,7 @@ import './Register.css'
 import {Link} from 'react-router-dom';
 import logo from './head-logo.png';
 import registerImg from './registerPng.svg';
+import axios from 'axios';
 function Register() {
  
 
@@ -14,6 +15,21 @@ const[pwd2,setpwd2]=useState('');
 
 const handelsubmit=(e)=>{
     e.preventDefault();
+    axios({
+        url: 'http://localhost:8080/api/v1/user/addUser',
+        method: "POST",
+        
+        params:{
+            'email':email,
+            'passwd':pwd1,
+        }
+    })
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 }
     return (
         <div className='main-Register'>
