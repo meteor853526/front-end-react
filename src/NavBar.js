@@ -24,6 +24,8 @@ const NavBar = () => {
                         <Link class="nav-link disabled" to="#">Disabled</Link>
                     </li>
                 </ul>
+
+                <Link to="login" class="navbar-brand">登入</Link>
             </div>
             <div class="flex-row">
                 

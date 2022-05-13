@@ -35,14 +35,15 @@ function App() {
               <Route path="/product" element={<ContentComponent/>}/>
               <Route path="/AddProduct" element={<AddProduct/>}/>
 
-              <Route path="/login" element={state.user ? <Home/> : <Login/>}>
+              <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
+              
               {/* {users ? <Home/> : <Login/>} 
               {state.user ? <Home/> : <Login/> } */}
-              </Route>
-              <Route path="/Register"element={<Register/>} >
+              
+              <Route path="/Register"element={<Register/>} />
                 
                 
-              </Route>
+              
           </Routes>
         </div>
       </Router>
