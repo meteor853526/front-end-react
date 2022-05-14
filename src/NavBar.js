@@ -1,16 +1,23 @@
 import { Link } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 
 const styles = {
     backgroundColor: '#e3f2fd' 
 }
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+    const user = props.user;
+    // console.log(user.user);
+    const stateURL = user.user? "/logout" :"/login"
+   
+
     return ( 
         
         <div class="container-fluid" style={{backgroundColor: "#FF6100"}}>
             <div class="flex-row">
                 <ul class="nav">
+                    <h1>{user.user}</h1>
                     <li class="nav-item">
                         <Link class="nav-link active" aria-current="page" to="#">賣家中心</Link>
                     </li>
@@ -25,7 +32,7 @@ const NavBar = () => {
                     </li>
                 </ul>
 
-                <Link to="login" class="navbar-brand">登入</Link>
+                <Link to={stateURL} class="navbar-brand">{stateURL}</Link>
             </div>
             <div class="flex-row">
                 

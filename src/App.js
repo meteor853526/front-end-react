@@ -28,7 +28,7 @@ function App() {
       <header className="App-header">
 
       <Router>
-        <NavBar />
+        <NavBar user={state}/>
         <div className="content">
           <Routes>
               <Route path="/" element={<Car/>}/>

@@ -4,7 +4,7 @@ import axios from 'axios';
 import FormData from 'form-data'
 
 
-class AddProduct extends Component {
+class Shop_Car extends Component {
     constructor(props) {
         super(props);
         
@@ -99,4 +99,4 @@ class AddProduct extends Component {
     
 }
  
-export default AddProduct;
+export default Shop_Car;
