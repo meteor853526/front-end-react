@@ -12,8 +12,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import {useSelector} from 'react-redux';
 import Home from './components/Home/Home';
-import ShopCar from './product/Shop_Car';
-
+import ShopCar from './checkout/Shop_Car';
+import CheckType from './checkout/Check_type';
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,7 +35,9 @@ function App() {
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent/>}/>
               <Route path="/AddProduct" element={<AddProduct/>}/>
-
+              
+              <Route path="/Check_type" element={<CheckType/>}/>
+           
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
               <Route path="/list_car" element={<ShopCar user={state}/>}/>
               {/* <NavBar user={state}/> */}

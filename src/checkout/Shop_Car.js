@@ -4,48 +4,67 @@ import { useEffect, useState } from "react";
 import shop_service from "../services/shop_service";
 import axios from 'axios';
 import FormData from 'form-data'
-
+import CheckType from "./Check_type";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+  } from "react-router-dom";
 
 const Shop_Car =(props)=> {
     
     const [id, setid] = useState([])
     const user = props.user;
-    // useEffect(() =>{
-    //     getservice()
-    // },[])
+    useEffect(() =>{
+        // getservice()
+        axios({
+            url: 'http://localhost:8080/api/v1/Shop_Car',
+            method: "GET",
+            headers: {
+                'content-type': 'application/json'
+            },
+            params:{
+            'email':props.user.user
+            }
+        })
+        .then(function (res) {
+            setid(res.data);
+            console.log(res.data);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    },[props.user.user])
     
     // const getservice = () =>{
-        
-    //     const {data:response } = shop_service.getservice()
-    //     .then((response) =>{
-    //         // for( var i in response.data){
-    //         //     y.push( response.data[i]);
-    //         //    }
+    //     console.log(props.user)
+    //     shop_service.getservice(props.user).then((response) =>{
     //         setid();
     //         console.log(response)
     //         console.log(response.data)
     //     })
-    //     console.log(response)
+        
     // }
 
-    axios({
-        url: 'http://localhost:8080/api/v1/Shop_Car/listcar',
-        method: "POST",
-        headers: {
-            'content-type': 'application/json'
-        },
-        params:{
-            'email':props.user.user
-        }
-    })
-    .then(function (res) {
-        setid(res.data);
-        console.log(res);
-        console.log("?????????????"+res.data.id);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+    // axios({
+    //     url: 'http://localhost:8080/api/v1/Shop_Car',
+    //     method: "GET",
+    //     headers: {
+    //         'content-type': 'application/json'
+    //     },
+    //     params:{
+    //         'email':props.user.user
+    //     }
+    // })
+    // .then(function (res) {
+    //     setid(res.data);
+    //     console.log(res);
+    //     console.log("?????????????"+res.data.id);
+    // })
+    // .catch(function (error) {
+    //     console.log(error);
+    // });
 
 
    
@@ -53,7 +72,12 @@ const Shop_Car =(props)=> {
 
     return ( 
         <div className="row_product">
-            {/* {
+            
+            
+
+           
+            <Link to="/Check_type" className="btn1"><button className="btn1">下一步</button></Link>
+            {
                 id.map(
                     id => 
                             <div class="list-group">
@@ -85,9 +109,10 @@ const Shop_Car =(props)=> {
                     
                     
                 )
-            } */}
+            }
             
         </div>
+
         
         
         

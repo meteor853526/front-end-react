@@ -41,7 +41,7 @@ const NavBar = (props) => {
             </div>
             <div class="flex-row">
                 
-                <Link to="#" class="navbar-brand">購物網</Link>
+                <Link to="/" class="navbar-brand">購物網</Link>
                 <div class="">
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{ "width" : "100vh"}}></input>
