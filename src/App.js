@@ -12,6 +12,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import {useSelector} from 'react-redux';
 import Home from './components/Home/Home';
+import ShopCar from './product/Shop_Car';
 
 import {
   BrowserRouter as Router,
@@ -36,9 +37,11 @@ function App() {
               <Route path="/AddProduct" element={<AddProduct/>}/>
 
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
-              
+              <Route path="/list_car" element={<ShopCar user={state}/>}/>
+              {/* <NavBar user={state}/> */}
               {/* {users ? <Home/> : <Login/>} 
               {state.user ? <Home/> : <Login/> } */}
+
               
               <Route path="/Register"element={<Register/>} />
                 

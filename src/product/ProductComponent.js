@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const Product_component =(props)=> {
-    const user = props.user;
-    const email = user.user;
+
     const [id, setid] = useState([])
-    const [productid, setproductid] = useState([])
+
     useEffect(() =>{
         getservice()
     },[])
@@ -26,8 +25,6 @@ const Product_component =(props)=> {
     const submitHandler =(id) =>{
        
 
-        
-        
         axios({
             url: 'http://localhost:8080/api/v1/Shop_Car/addcar',
             method: "POST",

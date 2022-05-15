@@ -1,102 +1,99 @@
 import { Link } from "react-router-dom";
 import React,{Component} from "react";
+import { useEffect, useState } from "react";
+import shop_service from "../services/shop_service";
 import axios from 'axios';
 import FormData from 'form-data'
 
 
-class Shop_Car extends Component {
-    constructor(props) {
-        super(props);
+const Shop_Car =(props)=> {
+    
+    const [id, setid] = useState([])
+    const user = props.user;
+    // useEffect(() =>{
+    //     getservice()
+    // },[])
+    
+    // const getservice = () =>{
         
-        this.state = {
-            name:'',
-            category: '',
-            price: 0,
-            type: '',
-            number: 0,
-            introduce:'',
-            image:null,
+    //     const {data:response } = shop_service.getservice()
+    //     .then((response) =>{
+    //         // for( var i in response.data){
+    //         //     y.push( response.data[i]);
+    //         //    }
+    //         setid();
+    //         console.log(response)
+    //         console.log(response.data)
+    //     })
+    //     console.log(response)
+    // }
 
-
+    axios({
+        url: 'http://localhost:8080/api/v1/Shop_Car/listcar',
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        },
+        params:{
+            'email':props.user.user
         }
-    }
-    
-    changeHandler =(e) =>{
-        this.setState({[e.target.name]: e.target.value});
-        
-    }
+    })
+    .then(function (res) {
+        setid(res.data);
+        console.log(res);
+        console.log("?????????????"+res.data.id);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
+
    
-    
-    
-    submitHandler =(e) =>{
-        e.preventDefault();
 
-        const formData = new FormData();
-  
-        formData.append("image", this.state.image);
-        
-        
-        console.log(...formData)
-        
-        axios({
-            url: 'http://localhost:8080/api/v1/product/addP',
-            method: "POST",
-            data: formData,
-            headers: {
-                'content-type': 'multipart/form-data'
-            },
-            params:{
-                'name':this.state.name,
-                'category': this.state.category,
-                'price':this.state.price,
-                'type': this.state.type,
-                'number':this.state.number,
-                'introduce':this.state.introduce,
-            }
-        })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-    }
 
-    render() {
-        const {name, category, price, type, number,introduce,image} = this.state;
-        
-        return ( 
-            <div class="card">
-              
-                <div class="card-header">
-                    <p class="h4 mb-2 text-center">Add Product</p>
-                </div>
-                <div class="card-body">
-                    <form class="text-center border border-light p-5" onSubmit={this.submitHandler}>
-    
-                    
-                        <input type="text" name="name" id="name" class="form-control mb-4" value={name}placeholder="Product Name" onChange={this.changeHandler}/>
-                        <input type="text" name="category" id="category" class="form-control mb-4"value={category} placeholder="Product 商品類別"onChange={this.changeHandler}/>
-                        <input type="number" name="number" id="price" class="form-control mb-4"value={price} placeholder="Product Price"onChange={this.changeHandler}/>
-                        <input type="text" name="type" id="type" class="form-control mb-4"value={type} placeholder="Product Type 款式"onChange={this.changeHandler}/>
-                        <input type="number" name="number" id="number" class="form-control mb-4" value={number}placeholder="Product 數量"onChange={this.changeHandler}/>
-                        
-    
-                        <textarea type="text"class="form-control mb-4" id="introduce" name="introduce"value={introduce}placeholder="Product Description"onChange={this.changeHandler}>Product Description</textarea>
-                        <div class="custom-file mb-4">
-                            <input type="file" name="image"accept="image/png,image/gif,image/jpeg" class="custom-file-input"id="image"value={image}onChange={this.changeHandler}/>
-                            <label class="custom-file-label"for="customFile">Product Image</label>
+    return ( 
+        <div className="row_product">
+            {/* {
+                id.map(
+                    id => 
+                            <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{id.productid}</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">Some placeholder content in a paragraph.</p>
+                            <small>And some small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">List group item heading</h5>
+                                <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Some placeholder content in a paragraph.</p>
+                            <small class="text-muted">And some muted small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">List group item heading</h5>
+                                <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Some placeholder content in a paragraph.</p>
+                            <small class="text-muted">And some muted small print.</small>
+                            </a>
                         </div>
-                        
-                        <button class="btn btn-info btn-block" type="submit">add</button>
-                    </form>
-                </div>
-            </div>
-        );
+                    
+                    
+                )
+            } */}
+            
+        </div>
+        
+        
+        
 
-    }
 
-    
+     );
 }
  
 export default Shop_Car;
