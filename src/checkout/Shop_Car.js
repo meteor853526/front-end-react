@@ -36,7 +36,11 @@ const Shop_Car =(props)=> {
         });
 
     },[props.user.user])
-    
+    var data = {id};
+    var path = {
+        pathname:'/Check_type',
+        state:id,
+    }
     // const getservice = () =>{
     //     console.log(props.user)
     //     shop_service.getservice(props.user).then((response) =>{
@@ -76,7 +80,7 @@ const Shop_Car =(props)=> {
             
 
            
-            <Link to="/Check_type" className="btn1"><button className="btn1">下一步</button></Link>
+            <Link to={path} className="btn1"><button className="btn1">下一步</button></Link>
             {
                 id.map(
                     id => 
