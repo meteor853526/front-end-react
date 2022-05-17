@@ -38,7 +38,7 @@ function App() {
               <Route path="/AddProduct" element={<AddProduct/>}/>
               
               <Route path="/Check_type" element={<CheckType/>}/>
-              <Route path="/Data_page" element={<DataPage/>}/>
+              <Route path="/Data_page" element={<DataPage  user={state} />}/>
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
               <Route path="/list_car" element={<ShopCar user={state}/>}/>
               {/* <NavBar user={state}/> */}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import React,{Component} from "react";
 import { useEffect, useState } from "react";
 import shop_service from "../services/shop_service";
@@ -14,8 +14,7 @@ import {
 const Shop_Car =(props)=> {
     
     const [id, setid] = useState([])
-    const user = props.user;
-    var data
+
     useEffect(() =>{
         // getservice()
         axios({
