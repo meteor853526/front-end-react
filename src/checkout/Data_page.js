@@ -74,7 +74,29 @@ const DataPage = (props) => {
     
     const submitHandler =(e) =>{
         e.preventDefault();
-        
+        axios({
+            url: 'http://localhost:8080/api/v1/Order/take',
+            method: "GET",
+            headers: {
+                'content-type': 'application/json'
+            },
+            params:{
+                'email' : props.user.user,
+                'Fname':Fname,
+                'Lname':Lname,
+                'phone':phone,
+                'address':address,
+                'delivery_type':delivery_type,
+                'pay_type':pay_type,
+                'time':moment().format('YYYY-MM-DD HH:mm:ss'),
+            }
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
         
     }
 
@@ -92,8 +114,9 @@ const DataPage = (props) => {
                 {/* <h1>{moment().format('YYYY-MM-DD HH:mm:ss')}</h1> */}
                 <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">名字</span>
-                <input type="text" class="form-control" placeholder="Recipient's username"value={Lname} aria-label="Recipient's username" aria-describedby="basic-addon2"onChange={() => setLname(this.value)}/>
+                <input type="text" class="form-control" placeholder="Recipient's username"value={Lname} aria-label="Recipient's username" aria-describedby="basic-addon2"onChange={e => setLname(e.target.value)}/>
                 {/* <span class="input-group-text" id="basic-addon2"></span> */}
+                <h1>{Lname}</h1>
                 </div>
 
                 <label for="basic-url" class="form-label">聯絡資訊及地址</label>
@@ -132,12 +155,15 @@ const DataPage = (props) => {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <h5>{Fname}</h5> <h5>{Lname}</h5>
+                        <h5>{address}</h5>
+                        <h5>{phone}</h5>   
                         ...
                         {
                         id.map(
                     
                             id => 
-                                <h1>{id.id}</h1>
+                                <h1>{id.productid} {id.productName} {id.number} {id.price}</h1>
 
                                 )
 

@@ -35,7 +35,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent/>}/>
-              <Route path="/AddProduct" element={<AddProduct/>}/>
+              <Route path="/AddProduct" element={<AddProduct user={state}/> }/>
               
               <Route path="/Check_type" element={<CheckType/>}/>
               <Route path="/Data_page" element={<DataPage  user={state} />}/>

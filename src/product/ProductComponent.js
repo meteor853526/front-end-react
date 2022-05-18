@@ -22,7 +22,7 @@ const Product_component =(props)=> {
     }
 
 
-    const submitHandler =(id) =>{
+    const submitHandler =(id,name) =>{
        
 
         axios({
@@ -34,8 +34,9 @@ const Product_component =(props)=> {
             },
             params:{
                 'email':props.user,
-                'productid':id
-
+                'productid':id,
+                'productName' : name
+                
             }
         })
         .then(function (response) {
@@ -66,7 +67,7 @@ const Product_component =(props)=> {
                                        
                                         <p className="card-text">{id.number}</p>
 
-                                        <button className="btn1"  onClick={() => submitHandler(id.id)}>加入購物車</button>
+                                        <button className="btn1"  onClick={() => submitHandler(id.id,id.name)}>加入購物車</button>
                                     </div>
                                     </div>
                                 </div>

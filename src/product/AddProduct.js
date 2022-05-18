@@ -52,6 +52,7 @@ class AddProduct extends Component {
                 'type': this.state.type,
                 'number':this.state.number,
                 'introduce':this.state.introduce,
+                'owner':this.props.user.user
             }
         })
         .then(function (response) {
