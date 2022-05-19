@@ -129,7 +129,7 @@ const Content_Component = (props) =>{
                     
                     <div className="col-10 ">
                         <div className="">
-                            <ProductComponent user = {props.user.user? "":"??"}className="row_product"/>
+                            <ProductComponent className="row_product"/>
                         </div>
                         
                     </div>

@@ -34,7 +34,7 @@ function App() {
         <div className="content">
           <Routes>
               <Route path="/" element={<Car/>}/>
-              <Route path="/product" element={<ContentComponent/>}/>
+              <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state}/> }/>
               
               <Route path="/Check_type" element={<CheckType/>}/>
