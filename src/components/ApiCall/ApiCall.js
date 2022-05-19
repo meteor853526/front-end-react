@@ -8,18 +8,7 @@ dispatch(startlogin());
 
         
     try {
-        // const user=await axios.post('http://localhost:8080/api/v1/user/checkUser',userCredentials,{
-        //     'content-type': 'application/x-www-form-urlencoded'
-        // })
-        // .then(function (response) {
-        //     console.log(response);
-        //     dispatch(successlogin(response));
-            
-        // })
-        // .catch(function (error) {
-        //     console.log(error);
-        // });
-      
+        
 
         const user = await axios({
             url: 'http://localhost:8080/api/v1/user/checkUser',
@@ -37,6 +26,7 @@ dispatch(startlogin());
         .then(function (res) {
             console.log(res);
             dispatch(successlogin(userCredentials));
+
         })
         .catch(function (error) {
             console.log(error);

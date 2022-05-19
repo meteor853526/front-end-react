@@ -18,6 +18,8 @@ import DataPage from './checkout/Data_page';
 import LoginSeller from './components/LoginSeller/LoginSeller';
 import RegisterSeller from './components/RegisterSeller/RegisterSeller'
 import Seller from './sell/Seller.js'
+import SellerProduct from './sell/SellerProduct';
+import SellerOrder from './sell/SellerOrder';
 import {
   BrowserRouter as Router,
   Routes,
@@ -27,7 +29,9 @@ import {
 
 
 function App() {
+
   const state = useSelector(state => state.UserReducer);
+  const state2 = useSelector(state2 => state2.UserReducer);
   return (
     <div className="App">
       <header className="App-header">
@@ -38,10 +42,12 @@ function App() {
           <Routes>
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
-              <Route path="/AddProduct" element={<AddProduct user={state}/> }/>
+              <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
               <Route path="/Seller" element={<Seller/>}/>
-              <Route path="/loginSeller" element={<LoginSeller/>} />
-              <Route path="/RegisterSeller" element={state.user ? <Home/> : <RegisterSeller/>} />
+              <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
+              <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
+              <Route path="/loginSeller" element={state2.user ? <Seller/> : <LoginSeller/>} />
+              <Route path="/RegisterSeller" element={<RegisterSeller/>} />
               <Route path="/Check_type" element={<CheckType/>}/>
               <Route path="/Data_page" element={<DataPage  user={state} />}/>
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>

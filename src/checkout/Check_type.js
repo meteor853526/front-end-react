@@ -26,21 +26,9 @@ const Check_type =() =>{
     }
 
     const submitHandler = () => {
-        // const path = {
-        //     pathname:'/Data_page',
-        //     state:{ pay_type : this.state.pay_type,
-        //             delivery_type:this.state.delivery_type }   
-        // }
-        // console.log(path.state)
-        //this.props.navigate('/Data_page',{state:{pay_type:this.state.pay_type,delivery_type:this.state.delivery_type}});
         
     }
    
-    // path = {
-    //     pathname:'/Data_page',
-    //     state:{ pay_type : this.state.pay_type,
-    //             delivery_type:this.state.delivery_type }   
-    // }
     
         
     return ( 

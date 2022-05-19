@@ -16,7 +16,7 @@ class AddProduct extends Component {
             number: 0,
             introduce:'',
             image:null,
-
+            owner:this.props.user
 
         }
     }
@@ -78,7 +78,7 @@ class AddProduct extends Component {
                     
                         <input type="text" name="name" id="name" class="form-control mb-4" value={name}placeholder="Product Name" onChange={this.changeHandler}/>
                         <input type="text" name="category" id="category" class="form-control mb-4"value={category} placeholder="Product 商品類別"onChange={this.changeHandler}/>
-                        <input type="number" name="number" id="price" class="form-control mb-4"value={price} placeholder="Product Price"onChange={this.changeHandler}/>
+                        <input type="number" name="price" id="price" class="form-control mb-4"value={price} placeholder="Product Price"onChange={this.changeHandler}/>
                         <input type="text" name="type" id="type" class="form-control mb-4"value={type} placeholder="Product Type 款式"onChange={this.changeHandler}/>
                         <input type="number" name="number" id="number" class="form-control mb-4" value={number}placeholder="Product 數量"onChange={this.changeHandler}/>
                         

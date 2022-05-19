@@ -8,7 +8,7 @@ import {useSelector,useDispatch} from 'react-redux';
 // import {useHistory} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 function LoginSeller() {
-const state = useSelector(state => state.UserReducer);
+const state2 = useSelector(state2 => state2.UserReducer);
 const dispatch = useDispatch();
 const initialValue = useRef(true);
 
@@ -18,16 +18,16 @@ useEffect(() => {
 
 
     if(!initialValue.current){
-        console.log(state);
+        console.log(state2);
         
     }else{
         initialValue.current=false;
     }
 
-    return()=>{
-        history('/Seller');
-    }
-}, [state,history])
+    // return()=>{
+    //     history('/Seller');
+    // }
+}, [state2,history])
 
 
 
