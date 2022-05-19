@@ -6,7 +6,7 @@ import ProductComponent from './ProductComponent.js';
 
 
 const Content_Component = (props) =>{
-    const user = props.user;
+    // const user = props.user;
     const [id, setid] = useState([])
 
     useEffect(() =>{
@@ -36,7 +36,7 @@ const Content_Component = (props) =>{
                 <div className="row side-flex">
                     <div className="col-2">
                         <div className="list_category_flex side">
-                            <h1>{user.user}</h1>
+                            {/* <h1>{user.user? 'none' : }</h1> */}
                             <button type="button" className="side col">所有分類</button>
                             <div className="list_category_flex">
                                 <a className="category_1" alt="" href="http://">書籍及雜誌期刊</a>
@@ -129,7 +129,7 @@ const Content_Component = (props) =>{
                     
                     <div className="col-10 ">
                         <div className="">
-                            <ProductComponent user = {props.user.user}className="row_product"/>
+                            <ProductComponent user = {props.user.user? "":"??"}className="row_product"/>
                         </div>
                         
                     </div>
