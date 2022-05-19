@@ -1,5 +1,5 @@
 
-import './App.css';
+//import './App.css';
 import NavBar from './NavBar';
 import NavBar_2 from './NavBar_2';
 import Card from './Card';
