@@ -33,7 +33,7 @@ const Product_component =(props)=> {
                 'content-type': 'application/json'
             },
             params:{
-                'email':props.user,
+                'email':props.user.user,
                 'productid':id,
                 'productName' : name
                 

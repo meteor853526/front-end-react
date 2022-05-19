@@ -8,7 +8,7 @@ const Seller = () => {
                 <div className="row">
                     <div className="col">
                     <div className="card" >
-                        <img src={require('./img/test.jpg')} alt="Background"/>
+                        {/* <img src={require('./img/test.jpg')} alt="Background"/> */}
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -18,7 +18,7 @@ const Seller = () => {
                     </div>
                     <div className="col">
                     <div className="card" >
-                        <img src={require('./img/test.jpg')} alt="Background"/>
+                        {/* <img src={require('./img/test.jpg')} alt="Background"/> */}
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -28,7 +28,7 @@ const Seller = () => {
                     </div>
                     <div className="col">
                     <div className="card" >
-                        <img src={require('./img/test.jpg')} alt="Background"/>
+                        {/* <img src={require('./img/test.jpg')} alt="Background"/> */}
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

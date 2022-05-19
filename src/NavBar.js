@@ -21,7 +21,7 @@ const NavBar = (props) => {
                     <h1>{user.user}</h1>
 
                     <li class="nav-item">
-                        <Link class="nav-link active" aria-current="page" to="#">賣家中心</Link>
+                        <Link class="nav-link active" aria-current="page" to="/loginSeller">賣家中心</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" to="#">Link</Link>

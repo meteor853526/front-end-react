@@ -15,6 +15,9 @@ import Home from './components/Home/Home';
 import ShopCar from './checkout/Shop_Car';
 import CheckType from './checkout/Check_type';
 import DataPage from './checkout/Data_page';
+import LoginSeller from './components/LoginSeller/LoginSeller';
+import RegisterSeller from './components/RegisterSeller/RegisterSeller'
+import Seller from './sell/Seller.js'
 import {
   BrowserRouter as Router,
   Routes,
@@ -36,7 +39,9 @@ function App() {
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state}/> }/>
-              
+              <Route path="/Seller" element={<Seller/>}/>
+              <Route path="/loginSeller" element={<LoginSeller/>} />
+              <Route path="/RegisterSeller" element={state.user ? <Home/> : <RegisterSeller/>} />
               <Route path="/Check_type" element={<CheckType/>}/>
               <Route path="/Data_page" element={<DataPage  user={state} />}/>
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>

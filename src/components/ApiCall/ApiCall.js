@@ -31,7 +31,7 @@ dispatch(startlogin());
             params:{
                 'email':userCredentials.email,
                 'passwd': userCredentials.passwd,
-                
+                'type' : userCredentials.type
             }
         })
         .then(function (res) {

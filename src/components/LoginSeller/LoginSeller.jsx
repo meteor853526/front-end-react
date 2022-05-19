@@ -7,7 +7,7 @@ import { ApiCall } from '../ApiCall/ApiCall';
 import {useSelector,useDispatch} from 'react-redux';
 // import {useHistory} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-function Login() {
+function LoginSeller() {
 const state = useSelector(state => state.UserReducer);
 const dispatch = useDispatch();
 const initialValue = useRef(true);
@@ -24,9 +24,9 @@ useEffect(() => {
         initialValue.current=false;
     }
 
-    // return()=>{
-    //     history('/');
-    // }
+    return()=>{
+        history('/Seller');
+    }
 }, [state,history])
 
 
@@ -34,13 +34,13 @@ useEffect(() => {
 
     const [emailval,setemailval]= useState("");
     const [passval,setpassval]= useState("");
-    const [type,settype]= useState("");
+    
 
     const handlesubmit= (event)=>{
         event.preventDefault();
       if(emailval!=="" || passval!==""){
           console.log(emailval + passval )
-         ApiCall({"email":emailval,"passwd":passval, "type" : "buyer"},dispatch);
+         ApiCall({"email":emailval,"passwd":passval, "type" : "seller"},dispatch);
          setemailval("");
          setpassval("");
         }
@@ -70,7 +70,7 @@ useEffect(() => {
                          </form>
 
                          <div className="footer">
-                             <h4>Don't have an Account ? <Link className='link' to='/Register'>Register Now</Link></h4>
+                             <h4>Don't have an Account ? <Link className='link' to='/RegisterSeller'>Register Now</Link></h4>
                          </div>
 
                  </div>
@@ -88,4 +88,4 @@ useEffect(() => {
     )
 }
 
-export default Login;
+export default LoginSeller;

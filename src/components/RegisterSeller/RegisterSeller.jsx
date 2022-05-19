@@ -24,7 +24,7 @@ const handelsubmit=(e)=>{
         params:{
             'email':email,
             'passwd':pwd1,
-            'type':"buyer"
+            'type' :"seller"
         }
     })
     .then(function (response) {
