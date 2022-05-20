@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 
 const SellerOrder = (props) => {
-
+    let history=useNavigate();
     const [id, setid] = useState([])
     console.log(props.user)
     useEffect(() =>{
@@ -35,8 +35,52 @@ const SellerOrder = (props) => {
 
     },[props.user.user])
 
+
+
+    const changeHandler =(id) =>{
+        axios({
+            url: 'http://localhost:8080/api/v1/Order/take',
+            method: "Put",
+            headers: {
+                'content-type': 'application/json'
+            },
+            params:{
+                'id' : id
+            }
+        })
+        .then(function (res) {
+            axios({
+                url: 'http://localhost:8080/api/v1/Order/owner',
+                method: "GET",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                params:{
+                    'owner':props.user.user
+                }
+            })
+            .then(function (res) {
+                setid(res.data);
+                console.log(res.data);
+        
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+         
+            console.log(res);
+            history('/SellerOrder')
+        })
+        .catch(function (error) {
+            console.log(error);
+            
+        });
+        
+    }
+   
     return ( 
         <div className="row_product">
+            <h1>當前訂單</h1>
             <table class="table">
                 <thead>
                     <tr>
@@ -63,10 +107,20 @@ const SellerOrder = (props) => {
                         <tr>
                         <th scope="row">1</th>
                         <td>{id.id}</td>
-                        <td>{id.Fname}{id.Lname}</td>
                         <td>{id.buyer}</td>
+                        <td>{id.fname}{id.lname}</td>
+                        <td>{id.phone}</td>
+                        <td>{id.address}</td>
+                        <td>{id.type}</td>
+                        <td>{id.pay_type}</td>
+                        <td>{id.time}</td>
+                        <td>{id.productid}</td>
+                        <td>{id.productname}</td>
+                        <td>{id.number}</td>
+                        <td style={{color: 'red'}}>{id.state}</td>
+                        <button class="btn btn-outline-success" onClick={() => changeHandler(id.id)}>出貨</button>
                         </tr>
-                    
+                        
                     
                 )
             }

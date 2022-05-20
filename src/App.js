@@ -43,10 +43,10 @@ function App() {
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
-              <Route path="/Seller" element={<Seller/>}/>
+              <Route path="/Seller" element={state2.user ? <Seller/> : <LoginSeller/>}/>
               <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
-              <Route path="/loginSeller" element={state2.user ? <Seller/> : <LoginSeller/>} />
+              <Route path="/loginSeller" element={state2.user ?  <LoginSeller/> : <Seller/>} />
               <Route path="/RegisterSeller" element={<RegisterSeller/>} />
               <Route path="/Check_type" element={<CheckType/>}/>
               <Route path="/Data_page" element={<DataPage  user={state} />}/>

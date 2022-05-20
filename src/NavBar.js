@@ -18,7 +18,7 @@ const NavBar = (props) => {
         <div class="container-fluid" style={{backgroundColor: "#FF6100"}}>
             <div class="flex-row">
                 <ul class="nav">
-                    <h1>{user.user}</h1>
+                    {/* <h1>{user.user}</h1> */}
 
                     <li class="nav-item">
                         <Link class="nav-link active" aria-current="page" to="/loginSeller">賣家中心</Link>

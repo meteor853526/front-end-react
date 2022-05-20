@@ -160,3 +160,11 @@ img {
   align-items: flex-start;
   flex-flow: wrap;
 }
+
+.car_flex{
+  display: flex;
+  flex-direction : column;
+}
+.flex_cut{
+  display: flex;
+}

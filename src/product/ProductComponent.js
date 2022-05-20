@@ -4,11 +4,31 @@ import React from 'react';
 import testservice from '../services/testservice';
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// class Toast extends React.Component {
+//     render() {
+//       return (
+//         <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+//         <div class="toast-header">
+//           {/* <img src="..." class="rounded me-2" alt="..."> */}
+//           <strong class="me-auto">Bootstrap</strong>
+//           <small>11 mins ago</small>
+//           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+//         </div>
+//         <div class="toast-body">
+//           Hello, world! This is a toast message.
+//         </div>
+//       </div>
+//       );
+//     }
+//   }
+
 
 const Product_component =(props)=> {
 
     const [id, setid] = useState([])
-
+    const [msg, setmsg] = useState('')
     useEffect(() =>{
         getservice()
     },[])
@@ -21,8 +41,19 @@ const Product_component =(props)=> {
         })
     }
 
+    // const toast = <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    //                 <div class="toast-header">
+    //                 {/* <img src="..." class="rounded me-2" alt="..."> */}
+    //                 <strong class="me-auto">Bootstrap</strong>
+    //                 <small>11 mins ago</small>
+    //                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    //                 </div>
+    //                 <div class="toast-body">
+    //                 Hello, world! This is a toast message.
+    //                 </div>
+    //             </div>
 
-    const submitHandler =(id,name) =>{
+    const submitHandler =(id,name,price) =>{
        
 
         axios({
@@ -35,19 +66,23 @@ const Product_component =(props)=> {
             params:{
                 'email':props.user.user,
                 'productid':id,
-                'productName' : name
-                
+                'productName' : name,
+                'price' :price
             }
         })
         .then(function (response) {
             console.log(response);
+            alert('Add Success');
+            
         })
         .catch(function (error) {
             console.log(error);
+            alert('Add Fail');
+
         });
     }
 
-
+    const notify = () => toast("Wow so easy!");
     return ( 
         <div className="row_product">
             {
@@ -67,7 +102,8 @@ const Product_component =(props)=> {
                                        
                                         <p className="card-text">{id.number}</p>
 
-                                        <button className="btn1"  onClick={() => submitHandler(id.id,id.name)}>加入購物車</button>
+                                        <button className="btn1"  onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button>
+                                        
                                     </div>
                                     </div>
                                 </div>
