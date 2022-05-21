@@ -28,7 +28,7 @@ const NavBar = (props) => {
                         <Link class="nav-link" to="/login">買家中心</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" to="#">Link</Link>
+                        <Link class="nav-link" to="/buyer">查詢訂單</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link disabled" to="#">Disabled</Link>

@@ -10,7 +10,7 @@ dispatch(startBuyerlogin(userCredentials));
     try {
         
 
-        const user = await axios({
+        await axios({
             url: 'http://localhost:8080/api/v1/user/checkUser',
             method: "POST",
             headers: {

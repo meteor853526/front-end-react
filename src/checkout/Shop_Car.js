@@ -10,11 +10,11 @@ import {
     Routes,
     Route,
   } from "react-router-dom";
-
+var count = 0
 const Shop_Car =(props)=> {
     
     const [id, setid] = useState([])
-
+    
     useEffect(() =>{
         // getservice()
         axios({
@@ -29,8 +29,10 @@ const Shop_Car =(props)=> {
         })
         .then(function (res) {
             setid(res.data);
-            console.log(res.data);
-    
+            count = 0
+            id.map(id=>count += id.price)
+            console.log(count);
+          
         })
         .catch(function (error) {
             console.log(error);
@@ -65,8 +67,10 @@ const Shop_Car =(props)=> {
             })
             .then(function (res) {
                 setid(res.data);
-                console.log(res.data);
-        
+                count = 0;
+                id.map(id=>count += id.price)
+                console.log(count);
+                
             })
             .catch(function (error) {
                 console.log(error);
@@ -109,7 +113,9 @@ const Shop_Car =(props)=> {
                     .then(function (res) {
                         setid(res.data);
                         console.log(res.data);
-                
+                        count = 0
+                        id.map(id=>count += id.price)
+                        console.log(count);
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -146,8 +152,10 @@ const Shop_Car =(props)=> {
                 })
                 .then(function (res) {
                     setid(res.data);
-                    console.log(res.data);
-            
+                    //console.log(...id);
+                    count = 0
+                    id.map(id=>count += id.price)
+                    console.log(count);
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -159,7 +167,7 @@ const Shop_Car =(props)=> {
         }
     }
    
-  
+    
 
     return ( 
 
@@ -204,11 +212,11 @@ const Shop_Car =(props)=> {
                 
             </div>
             <div className="">
-                
+                <h5>{count}</h5>
                 
             </div>
             <Link to='/Check_type' className="btn1"><button className="btn1">下一步</button></Link>
-        
+           
         </div>
         
 

@@ -6,9 +6,6 @@ const Buyer = () => {
             
             
         </div>
-        
-        
-        
 
 
      );
