@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const SellerOrder = (props) => {
     let history=useNavigate();
     const [id, setid] = useState([])
-    console.log(props.user)
+    console.log(props.user2)
     useEffect(() =>{
         // getservice()
         axios({
@@ -21,7 +21,7 @@ const SellerOrder = (props) => {
                 'content-type': 'application/json'
             },
             params:{
-                'owner':props.user.user
+                'owner':props.user.user2
             }
         })
         .then(function (res) {
@@ -56,7 +56,7 @@ const SellerOrder = (props) => {
                     'content-type': 'application/json'
                 },
                 params:{
-                    'owner':props.user.user
+                    'owner':props.user.user2
                 }
             })
             .then(function (res) {

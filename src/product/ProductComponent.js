@@ -77,7 +77,7 @@ const Product_component =(props)=> {
         })
         .catch(function (error) {
             console.log(error);
-            alert('Add Fail');
+            alert('請先登入會員');
 
         });
     }

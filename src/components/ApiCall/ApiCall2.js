@@ -2,9 +2,9 @@ import axios from 'axios';
 
 
 
-import {startBuyerlogin,successBuyerlogin,failedBuyerlogin} from '../Actions/Actions'
-export const ApiCall=async(userCredentials,dispatch)=>{
-dispatch(startBuyerlogin(userCredentials));
+import {startSellerlogin,successSellerlogin,failedSellerlogin} from '../Actions/Actions'
+export const ApiCall2=async(userCredentials2,dispatch2)=>{
+dispatch2(startSellerlogin());
 
         
     try {
@@ -16,16 +16,16 @@ dispatch(startBuyerlogin(userCredentials));
             headers: {
                 'content-type': 'application/json'
             },
-            data:userCredentials,
+            data:userCredentials2,
             params:{
-                'email':userCredentials.email,
-                'passwd': userCredentials.passwd,
-                'type' : userCredentials.type
+                'email':userCredentials2.email,
+                'passwd': userCredentials2.passwd,
+                'type' : userCredentials2.type
             }
         })
         .then(function (res) {
             console.log(res);
-            dispatch(successBuyerlogin(userCredentials.email));
+            dispatch2(successSellerlogin(userCredentials2.email));
 
         })
         .catch(function (error) {
@@ -40,7 +40,7 @@ dispatch(startBuyerlogin(userCredentials));
         
         
     } catch (error) {
-        dispatch(failedBuyerlogin(error));
+        dispatch2(failedSellerlogin(error));
         console.log(error);
 
     }

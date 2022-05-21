@@ -1,33 +1,33 @@
 const initialState = {
-    user:null,
+    user2:null,
     isFetch:false,
     isError:false,
 }
-const UserReducer=(state=initialState, action)=>{
+const UserReducer2=(state2=initialState, action)=>{
     switch (action.type){
-        case "STARTBUYER_LOGIN":
+        case "STARTSELLER_LOGIN":
             return {
-                user:null,
+                user2:null,
                 isFetch:true,
                 isError:false,
             };
 
-              case  "SUCCESSBUYER_LOGIN":
-                console.log(action.payload);
+              case  "SUCCESSSELLER_LOGIN":
+                  console.log(action.payload);
                 return {
                     isFetch:false,
                     isError:false,
-                    user:action.payload,
+                    user2:action.payload,
                 };
-                case  "FAILEDBUYER_LOGIN":
+                case  "FAILEDSELLER_LOGIN":
                     return {
-                    user:null,
+                    user2:null,
                     isFetch:false,
                     isError:action.payload,
                 };
-              default: return state;
+              default: return state2;
     }
 
 };
 
-export default UserReducer;
+export default UserReducer2;

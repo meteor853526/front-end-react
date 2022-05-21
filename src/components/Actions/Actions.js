@@ -1,21 +1,45 @@
-export const startlogin=()=>{
+export const startBuyerlogin=(userCredentials)=>{
     return {
-        type:"START_LOGIN"
+        type:"STARTBUYER_LOGIN",
+        payload: userCredentials
     };
    
 }
 
-export const successlogin=(user)=>{
+export const successBuyerlogin=(email)=>{
     return{
        
-        type:"SUCCESS_LOGIN",
-        payload:user
+        type:"SUCCESSBUYER_LOGIN",
+        payload:email
     };
 }
 
-export const failedlogin=(error)=>{
+export const failedBuyerlogin=(error)=>{
     return{
-        type:"FAILED_LOGIN",
+        type:"FAILEDBUYER_LOGIN",
+        payload:error
+    };
+}
+
+export const startSellerlogin=(userCredentials)=>{
+    return {
+        type:"STARTSELLER_LOGIN",
+        payload: userCredentials
+    };
+   
+}
+
+export const successSellerlogin=(email)=>{
+    return{
+       
+        type:"SUCCESSSELLER_LOGIN",
+        payload:email
+    };
+}
+
+export const failedSellerlogin=(error)=>{
+    return{
+        type:"FAILEDSELLER_LOGIN",
         payload:error
     };
 }

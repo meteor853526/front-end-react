@@ -9,6 +9,7 @@ import {useSelector,useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 function Login() {
 const state = useSelector(state => state.UserReducer);
+
 const dispatch = useDispatch();
 const initialValue = useRef(true);
 
@@ -34,7 +35,7 @@ useEffect(() => {
 
     const [emailval,setemailval]= useState("");
     const [passval,setpassval]= useState("");
-    const [type,settype]= useState("");
+    
 
     const handlesubmit= (event)=>{
         event.preventDefault();

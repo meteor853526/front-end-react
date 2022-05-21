@@ -48,7 +48,7 @@ const Shop_Car =(props)=> {
                 'content-type': 'application/json'
             },
             params:{
-                'productid' : id
+                'id' : id
             }
         })
         .then(function (response) {
@@ -78,48 +78,91 @@ const Shop_Car =(props)=> {
         
     }
 
-    const changeHandler2 =(id) =>{
-       
-        axios({
-            url: 'http://localhost:8080/api/v1/Shop_Car/cutnum',
-            method: "Put",
-            headers: {
-                'content-type': 'application/json'
-            },
-            params:{
-                'productid' : id
+    const changeHandler2 =(id,number) =>{
+       if(number === 1){
+            const confirmBox = window.confirm(
+                "Do you really want to delete this Crumb?"
+            )
+            if (confirmBox === true) {
+                axios({
+                    url: 'http://localhost:8080/api/v1/Shop_Car/del',
+                    method: "Delete",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    params:{
+                        'id' : id
+                    }
+                })
+                .then(function (response) {
+                    console.log(response);
+                    axios({
+                        url: 'http://localhost:8080/api/v1/Shop_Car',
+                        method: "GET",
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        params:{
+                        'email':props.user.user
+                        }
+                    })
+                    .then(function (res) {
+                        setid(res.data);
+                        console.log(res.data);
+                
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
             }
-        })
-        .then(function (response) {
-            console.log(response);
+       }else{
+
+       
             axios({
-                url: 'http://localhost:8080/api/v1/Shop_Car',
-                method: "GET",
+                url: 'http://localhost:8080/api/v1/Shop_Car/cutnum',
+                method: "Put",
                 headers: {
                     'content-type': 'application/json'
                 },
                 params:{
-                'email':props.user.user
+                    'id' : id
                 }
             })
-            .then(function (res) {
-                setid(res.data);
-                console.log(res.data);
-        
+            .then(function (response) {
+                console.log(response);
+                axios({
+                    url: 'http://localhost:8080/api/v1/Shop_Car',
+                    method: "GET",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    params:{
+                    'email':props.user.user
+                    }
+                })
+                .then(function (res) {
+                    setid(res.data);
+                    console.log(res.data);
+            
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
             })
             .catch(function (error) {
                 console.log(error);
             });
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-        
+        }
     }
    
-
+  
 
     return ( 
+
         <div className="car_flex">
 
         
@@ -146,9 +189,9 @@ const Shop_Car =(props)=> {
                                 <div class="flex_cut">
                                     <button class="btn btn-outline-success" style={{'height':"10%" , 'padding' : "10px"}} onClick ={() => changeHandler1(id.id)}>+</button>
                                     <h4>{id.number}</h4>
-                                    <button class="btn btn-outline-success" onClick ={() => changeHandler2(id.id)}>-</button>
+                                    <button class="btn btn-outline-success" onClick ={() => changeHandler2(id.id,id.number)}>-</button>
                                 </div>
-                                
+                                    
                                 {/* <small class="text-muted">And some muted small print.</small> */}
                                 </a>
                                 

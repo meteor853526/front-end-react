@@ -3,13 +3,14 @@ import './Login.css';
 import {Link} from 'react-router-dom';
 import logo from './logoPng.png';
 import welcomeimg from './welcomeback.svg';
-import { ApiCall } from '../ApiCall/ApiCall';
+import { ApiCall2 } from '../ApiCall/ApiCall2';
 import {useSelector,useDispatch} from 'react-redux';
 // import {useHistory} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 function LoginSeller() {
-const state2 = useSelector(state2 => state2.UserReducer);
-const dispatch = useDispatch();
+
+const state2 = useSelector(state2 => state2.UserReducer2);
+const dispatch2 = useDispatch();
 const initialValue = useRef(true);
 
 let history=useNavigate();
@@ -40,7 +41,7 @@ useEffect(() => {
         event.preventDefault();
       if(emailval!=="" || passval!==""){
           console.log(emailval + passval )
-         ApiCall({"email":emailval,"passwd":passval, "type" : "seller"},dispatch);
+         ApiCall2({"email":emailval,"passwd":passval, "type" : "seller"},dispatch2);
          setemailval("");
          setpassval("");
         }
@@ -57,7 +58,7 @@ useEffect(() => {
                          <div className="img-class">
                               <img src={logo} id="img-id" alt="" />
                           </div>
-                 
+                        <h5>???????????????</h5>
                         <form onSubmit={handlesubmit}>
                         <label htmlFor="emil1">Email</label>
                             <input placeholder="Enter your email..." type="email" value={emailval} 

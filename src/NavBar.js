@@ -8,6 +8,7 @@ const styles = {
 const NavBar = (props) => {
 
     const user = props.user;
+    const user2 = props.tp;
     // console.log(user.user);
     const stateURL = user.user? "/logout" :"/login"
     
@@ -18,13 +19,13 @@ const NavBar = (props) => {
         <div class="container-fluid" style={{backgroundColor: "#FF6100"}}>
             <div class="flex-row">
                 <ul class="nav">
-                    {/* <h1>{user.user}</h1> */}
+                    <h1>{user.user} {user2.user2}</h1>
 
                     <li class="nav-item">
                         <Link class="nav-link active" aria-current="page" to="/loginSeller">賣家中心</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" to="#">Link</Link>
+                        <Link class="nav-link" to="/login">買家中心</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" to="#">Link</Link>

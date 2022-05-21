@@ -20,6 +20,7 @@ import RegisterSeller from './components/RegisterSeller/RegisterSeller'
 import Seller from './sell/Seller.js'
 import SellerProduct from './sell/SellerProduct';
 import SellerOrder from './sell/SellerOrder';
+import Buyer from './buyer/Buyer'
 import {
   BrowserRouter as Router,
   Routes,
@@ -31,25 +32,33 @@ import {
 function App() {
 
   const state = useSelector(state => state.UserReducer);
-  const state2 = useSelector(state2 => state2.UserReducer);
+  const state2 = useSelector(state2 => state2.UserReducer2);
   return (
     <div className="App">
       <header className="App-header">
 
       <Router>
-        <NavBar user={state}/>
+        <NavBar user={state} tp={state2}/>
         <div className="content">
+          
           <Routes>
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
-              <Route path="/Seller" element={state2.user ? <Seller/> : <LoginSeller/>}/>
+
+              <Route path="/Seller" element={state2.user2 ? <Seller/> : <LoginSeller/>}/>
+
+              <Route path="/buyer" element={state.user ? <Buyer/> : <Login/>}/>
+
               <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
-              <Route path="/loginSeller" element={state2.user ?  <LoginSeller/> : <Seller/>} />
+
+              <Route path="/loginSeller" element={state2.user2 ?  <Seller/> : <LoginSeller/> } />
+
               <Route path="/RegisterSeller" element={<RegisterSeller/>} />
               <Route path="/Check_type" element={<CheckType/>}/>
               <Route path="/Data_page" element={<DataPage  user={state} />}/>
+
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
               <Route path="/list_car" element={<ShopCar user={state}/>}/>
               {/* <NavBar user={state}/> */}
