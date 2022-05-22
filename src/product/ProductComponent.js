@@ -33,6 +33,9 @@ const Product_component =(props)=> {
         getservice()
     },[])
 
+    useEffect(() =>{
+        
+    })
     const getservice = () =>{
         
         testservice.getservice().then((response) =>{

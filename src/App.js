@@ -48,7 +48,7 @@ function App() {
 
               <Route path="/Seller" element={state2.user2 ? <Seller/> : <LoginSeller/>}/>
 
-              <Route path="/buyer" element={state.user ? <Buyer/> : <Login/>}/>
+              <Route path="/buyer" element={state.user ? <Buyer user={state}/> : <Login/>}/>
 
               <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
