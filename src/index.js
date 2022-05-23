@@ -9,7 +9,8 @@ import App from './App';
 import store from './store';
 import * as ReactDOMClient from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-
+import "datatables.net-dt/js/dataTables.dataTables"
+import "datatables.net-dt/css/jquery.dataTables.min.css"
 const root = ReactDOMClient.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

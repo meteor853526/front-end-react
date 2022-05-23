@@ -64,11 +64,6 @@ const DataPage = (props) => {
   
         //var data = this.props.location.state;
     
-
-    const changeHandler =(e) =>{
-        //this.setState({[e.target.name]: e.target.value});
-        
-    }
    
     
     

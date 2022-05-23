@@ -21,6 +21,8 @@ import Seller from './sell/Seller.js'
 import SellerProduct from './sell/SellerProduct';
 import SellerOrder from './sell/SellerOrder';
 import Buyer from './buyer/Buyer'
+import BuyerCenter from './buyer/BuyerCenter'
+import BuyerOrder from './buyer/BuyerOrder'
 import {
   BrowserRouter as Router,
   Routes,
@@ -45,11 +47,11 @@ function App() {
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
-
+              
               <Route path="/Seller" element={state2.user2 ? <Seller/> : <LoginSeller/>}/>
-
+              <Route path="/BuyerOrder" element={state.user ? <BuyerOrder user={state}/> : <Login/>}/>
               <Route path="/buyer" element={state.user ? <Buyer user={state}/> : <Login/>}/>
-
+              <Route path="/buyerCenter" element={state.user ? <BuyerCenter user={state}/> : <Login/>}/>
               <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
 

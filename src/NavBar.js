@@ -34,10 +34,10 @@ const NavBar = (props) => {
                         <Link class="nav-link active" aria-current="page" to="/loginSeller">賣家中心</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" to="/login" >買家中心</Link>
+                        <Link class="nav-link" to="/buyerCenter" >買家中心</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" to="/buyer">查詢訂單</Link>
+                        <Link class="nav-link" to="/BuyerOrder">查詢訂單</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link disabled" to="#">Disabled</Link>
