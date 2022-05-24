@@ -168,3 +168,11 @@ img {
 .flex_cut{
   display: flex;
 }
+.up_btn{
+
+  z-index:1000;
+}
+.try{
+
+  z-index:1;
+}

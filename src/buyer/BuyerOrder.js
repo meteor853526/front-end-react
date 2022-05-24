@@ -64,15 +64,15 @@ const BuyerOrder = (props) => {
             })
             .then(function (res) {
                 setid(res.data);
-                console.log(res.data);
+          
         
             })
             .catch(function (error) {
                 console.log(error);
             });
          
-            console.log(res);
-            history('/buyer')
+       
+            //history('/buyer')
         })
         .catch(function (error) {
             console.log(error);

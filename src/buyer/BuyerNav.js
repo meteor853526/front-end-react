@@ -9,7 +9,7 @@ $.DataTable = require('datatables.net')
 const Buyer_nav = (props) => {
     let history=useNavigate();
     const [id, setid] = useState([])
-    console.log(props.user)
+ 
     const tableRef = useRef()
     
     useEffect(() => {
