@@ -4,7 +4,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import './index.css';
+import './css/index.css';
+import './css/nav.css';
+import './css/init.css'
 import App from './App';
 import store from './store';
 import * as ReactDOMClient from 'react-dom/client';

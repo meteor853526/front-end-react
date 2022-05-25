@@ -31,7 +31,7 @@ const Content_Component = (props) =>{
     return ( 
 
 
-        <div className="product_body" style={{width:"80vw"}}>
+        <div className="product_body" style={{width:"80vw" ,'margin-left':'10vw'}}>
             <div className="container-fluid">
                 <div className="row side-flex">
                     <div className="col-2">

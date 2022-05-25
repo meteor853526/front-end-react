@@ -24,13 +24,45 @@ const NavBar = (props) => {
 
 
     return ( 
-        <div>
-            <headr>
-                <div className="fix">
-                    
+            <nav>
+                <a href="/" class="index">
+                    <img src={require('./img/icon.png')} alt=""/>
+                </a>
+                <div class="index wrap_bar">
+                    <a href="/product" alt="" class="index">商店</a>
+                    <a href="/list_car" alt="" class="index">購物車</a>
+                    <a href="/BuyerOrder" alt="" class="index">訂單查詢</a>
                 </div>
-            </headr>
-        </div>
+                
+                <div class="nav-menu">
+                    <form action="/index.html" class="search">
+                        <input type="text" id="search" name="search"/>
+                        <input type="submit" id="submit"/>
+                        <label for="submit"><img src={require('./img/magnifying-glass.png')} alt=""/></label>
+                    </form>
+                    <ul class="drop-down-menu">
+
+                    
+                        <li>
+                            <a href="/">
+                            <img class="user-img" src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
+                            
+                            <span>登入</span>
+                            </a>
+                            <ul>
+                                <li className="drop"><a href="/login">會員登入</a>
+                                </li>
+                                <li className="drop"><a href="/loginSeller">賣家登入</a>
+                                </li>
+                                
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+      
 
 
 

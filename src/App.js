@@ -42,10 +42,10 @@ function App() {
 
       <Router>
         <NavBar user={state} tp={state2}/>
-        <div className="content">
+        <div className="all">
           
           <Routes>
-              {/* <Route path="/" element={<Car/>}/> */}
+              <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
               <Route path="/ListComment" element={<ListComment/>}/>
@@ -64,7 +64,7 @@ function App() {
               <Route path="/Data_page" element={<DataPage  user={state} />}/>
 
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
-              <Route path="/list_car" element={<ShopCar user={state}/>}/>
+              <Route path="/list_car" element={state.user ? <ShopCar user={state}/>  : <Login/>}/>
               {/* <NavBar user={state}/> */}
               {/* {users ? <Home/> : <Login/>} 
               {state.user ? <Home/> : <Login/> } */}

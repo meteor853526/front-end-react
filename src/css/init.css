@@ -1,0 +1,39 @@
+:root {
+    --main-color: #e2ebf0;
+    --main-deep-color: #acb3b8;
+    --secondary-color: #1b3e4a;
+    --secondary-deep-color: #0e2025;
+    --secondary-transparent-color: #0e2025e0;
+    --accent-color: #4693b0;
+    --accent-deep-color: #285869;
+}
+
+html,
+body {
+    margin: 0;
+    /* padding: 0; */
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+
+/* 捲軸寬度 */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* 捲軸本體顏色 */
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
