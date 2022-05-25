@@ -45,7 +45,7 @@ function App() {
         <div className="content">
           
           <Routes>
-              <Route path="/" element={<Car/>}/>
+              {/* <Route path="/" element={<Car/>}/> */}
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
               <Route path="/ListComment" element={<ListComment/>}/>

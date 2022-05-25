@@ -36,7 +36,7 @@ class AddProduct extends Component {
         formData.append("image", this.state.image);
         
         
-        console.log(...formData)
+        //console.log(...formData)
         
         axios({
             url: 'http://localhost:8080/api/v1/product/addP',
