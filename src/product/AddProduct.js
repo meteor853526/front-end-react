@@ -15,8 +15,8 @@ class AddProduct extends Component {
             type: '',
             number: 0,
             introduce:'',
-            image:null,
-            owner:this.props.user
+            file:'',
+            owner:this.props.user.user2
 
         }
     }
@@ -26,24 +26,33 @@ class AddProduct extends Component {
         
     }
    
-    
+    onImageChange = e => {
+        this.setState({[e.target.name]:e.target.files})
+        // if (event.target.files && event.target.files[0]) {
+        //   let img = event.target.files[0];
+        //   this.setState({
+        //     image: URL.createObjectURL(img)
+        //   });
+        // }
+      };
     
     submitHandler =(e) =>{
         e.preventDefault();
 
         const formData = new FormData();
   
-        formData.append("image", this.state.image);
+        formData.append("file", this.state.file);
         
         
-        //console.log(...formData)
+        console.log(...formData)
         
         axios({
             url: 'http://localhost:8080/api/v1/product/addP',
-            method: "POST",
+            method: "Post",
             data: formData,
             headers: {
-                'content-type': 'multipart/form-data'
+                "Content-type": "multipart/form-data",
+                
             },
             params:{
                 'name':this.state.name,
@@ -52,7 +61,8 @@ class AddProduct extends Component {
                 'type': this.state.type,
                 'number':this.state.number,
                 'introduce':this.state.introduce,
-                'owner':this.props.user.user
+                'owner':this.props.user.user2,
+                'file':this.state.file
             }
         })
         .then(function (response) {
@@ -64,11 +74,11 @@ class AddProduct extends Component {
     }
 
     render() {
-        const {name, category, price, type, number,introduce,image} = this.state;
+        const {name, category, price, type, number,introduce,file} = this.state;
         
         return ( 
             <div class="card">
-              
+                {this.props.user.user2}
                 <div class="card-header">
                     <p class="h4 mb-2 text-center">Add Product</p>
                 </div>
@@ -85,7 +95,7 @@ class AddProduct extends Component {
     
                         <textarea type="text"class="form-control mb-4" id="introduce" name="introduce"value={introduce}placeholder="Product Description"onChange={this.changeHandler}>Product Description</textarea>
                         <div class="custom-file mb-4">
-                            <input type="file" name="image"accept="image/png,image/gif,image/jpeg" class="custom-file-input"id="image"value={image}onChange={this.changeHandler}/>
+                            <input type="file" name="file"accept="image/png,image/gif,image/jpeg" class="custom-file-input"id="image"onChange={this.onImageChange}/>
                             <label class="custom-file-label"for="customFile">Product Image</label>
                         </div>
                         
