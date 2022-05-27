@@ -62,14 +62,14 @@ const SellerProduct = (props) => {
                                 
                             </div>
                         <div className="">
-                        <Link to="/AddProduct" className="btn1"><button className="btn1">增加</button></Link>
+                        
                         </div>
                     </div>
                     
                     
                 )
             }
-            
+            <Link to="/AddProduct" className="btn1"><button className="btn1">增加</button></Link>
         </div>
         
         
