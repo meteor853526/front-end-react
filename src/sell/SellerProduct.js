@@ -45,7 +45,7 @@ const SellerProduct = (props) => {
                             <div className="row product_row">
                                 <div className="col">
                                 <div className="card" >
-                                    {/* <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:100, height:100}} resizeMode="cover" alt=""/> */}
+                                    <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:100, height:100}} resizeMode="cover" alt=""/>
                                     <div className="card-body">
                                         
                                         <h5 className="card-title">{id.id} {id.name}</h5>
