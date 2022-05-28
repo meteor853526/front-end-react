@@ -42,7 +42,7 @@ function App() {
 
       <Router>
         <NavBar user={state} tp={state2}/>
-        <div className="all">
+        <div className="all" >
           
           <Routes>
               <Route path="/" element={<Car/>}/>
