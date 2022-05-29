@@ -180,9 +180,9 @@ img {
 .img_test{
   /* margin-left:2vw; */
 }
-input[type="radio"] {
+/* input[type="radio"] {
   display: none;
-}
+} */
 input[type="checkbox"] {
   /* filter: invert(100%) hue-rotate(18deg) brightness(1.7); */
   filter: hue-rotate(330deg) brightness(1.1);

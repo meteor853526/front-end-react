@@ -32,7 +32,7 @@ const Check_type =() =>{
     
         
     return ( 
-        <div class="">
+        <div class="" style={{"width":"80vw"}}>
 
         
             <div>

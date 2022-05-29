@@ -30,7 +30,8 @@ const NavBar = (props) => {
                 </a>
                 <div class="index wrap_bar">
                     <a href="/product" alt="" class="index">商店</a>
-                    <a href="/list_car" alt="" class="index">購物車</a>
+                    <Link class="index" to={url} onClick={check}>查看購物車</Link>
+                    {/* <a href="/list_car" alt="" class="index">購物車</a> */}
                     <a href="/BuyerOrder" alt="" class="index">訂單查詢</a>
                 </div>
                 

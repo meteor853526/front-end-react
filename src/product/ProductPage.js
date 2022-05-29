@@ -4,24 +4,24 @@ import axios from 'axios';
 import FormData from 'form-data'
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
+import ListComment from './ListComment'
 const ProduntPage =(props)=> {
     const location = useLocation();
-    const { productid } = location.state;
+    const { productid ,introduce,name,price} = location.state;
     console.log(productid); // output: "the-page-id"
     // const [id, setid] = useState([])
     // const [msg, setmsg] = useState('')
-    // useEffect(() =>{
-    //     getservice()
-    // },[])
+
+
+
+    useEffect(() =>{
+        
+
+    },[])
 
     
-    // const getservice = () =>{
-        
-    //     testservice.getservice().then((response) =>{
-    //         setid(response.data);
-    //         console.log(response.data)
-    //     })
-    // }
+    
 
     // const toast = <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     //                 <div class="toast-header">
@@ -80,14 +80,14 @@ const ProduntPage =(props)=> {
                         <img src="https://picsum.photos/1000/500?random=4" alt=""/>
                         <img src="https://picsum.photos/1000/800?random=5" alt=""/>
                     </div>
-                    <div class="info">
+                    <div class="info2">
                         <div>
-                            <div class="info-inner">
+                            <div class="info2-inner">
                                 <a href="" class="seller">Natural rubber outsoles</a>
-                                <h1 class="name">衣服</h1>
-                                <span class="price">NT$1000</span>
+                                <h1 class="name">{productid}.{name}</h1>
+                                <span class="price">NT${price}</span>
                                 <p class="excerpt">
-                                    The style that started it all. Never changed, but constantly improved. A modern reinterpretation of a classic tennis sneaker. This rendition is made from premium ...
+                                    {introduce}
                                 </p>
                                 <a class="more-information" href="#more_info">More information</a>
                             </div>
@@ -136,27 +136,10 @@ const ProduntPage =(props)=> {
                             <div class="review-summary-count">三則評論</div>
                         </div>
                     </div>
-                    <div class="li">
-                        <div class="user">
-                            <img class="user-img" src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
-                            <div>
-                                <div>G****y</div>
-                                <div>March 18, 2022</div>
-                            </div>
-                        </div>
-                        <div class="comment">
-                            <div>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                            </div>
-                            <div>滿意 衣服很舒服</div>
-                        </div>
-                    </div>
+                    
 
-                    <div class="li">
+                    <ListComment state={productid} />
+                    {/* <div class="li">
                         <div class="user">
                             <img class="user-img" src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
                             <div>
@@ -166,27 +149,13 @@ const ProduntPage =(props)=> {
                         </div>
                         <div class="comment">
                             <div>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-full.svg" alt=""/>
-                                <img class="star" src="media/star-empty.svg" alt=""/>
-                            </div>
-                            <div>滿意 衣服很舒服</div>
-                        </div>
-                    </div>
-
-                    <div class="li">
-                        <div class="user">
-                            <img class="user-img" src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
-                            <div>
-                                <div>G****y</div>
-                                <div>March 18, 2022</div>
-                            </div>
-                        </div>
-                        <div class="comment">
-                            <div>
-                                <img class="star" src="media/star-full.svg" alt=""/>
+                            <ReactStars
+                                count={5}
+                                value={4}
+                                edit={false}
+                                size={24}
+                                activeColor="#ffd700"
+                            />
                                 <img class="star" src="media/star-full.svg" alt=""/>
                                 <img class="star" src="media/star-full.svg" alt=""/>
                                 <img class="star" src="media/star-empty.svg" alt=""/>
@@ -194,7 +163,7 @@ const ProduntPage =(props)=> {
                             </div>
                             <div>滿意 衣服很舒服</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             

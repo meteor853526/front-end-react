@@ -91,14 +91,14 @@ const Product_component =(props)=> {
                 id.map(
                     id=>    
                     <div>
-                        <Link to='/ProductPage' state={{productid: id.id}}>
+                        <Link to='/ProductPage' state={{productid: id.id, introduce: id.introduce,name:id.name,price:id.price}}>
                             <div class="img-cover">
                                 <img  src={ `data:image/jpeg;base64,${id.image}`}   resizeMode="" alt=""/>
                             </div>
                         </Link>
                             <div class="info">
-                                <div class="seller">賣家1</div>
-                                <div class="title">商品1</div>
+                                <div class="seller">{id.owner} (owner)</div>
+                                <div class="title">{id.name}</div>
                             </div>
                             <span style={{display: "flex"}}>
                                 <button className="btn1 up_btn"  style={{marginLeft: "10px"}} onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button>
