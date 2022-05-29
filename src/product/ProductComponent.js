@@ -98,17 +98,20 @@ const Product_component =(props)=> {
                             <div className="row product_row">
                                 <div className="col">
                                 <div className="card" >
-                                    <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:100, height:100}} resizeMode="cover" alt=""/>
+                                    
                                     <div className="card-body">
+
                                         <Link className="try" to='/ListComment' state={{productid: id.id}}>
-                                        <h5 className="card-title">{id.id} {id.name}</h5>
-                                        <p className="card-text">{id.price}</p>
-                                        <p className="card-text">{id.introduce}{id.type}</p>
+                                        <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:'100%', height:'100%'}} resizeMode="cover" alt=""/>
+                                        <h5 className="card-title">{id.name}</h5>
+                                        
+                                        {/* <p className="card-text">{id.introduce}{id.type}</p> */}
                                        
-                                        <p className="card-text">{id.number}</p>
+                                        {/* <p className="card-text">{id.number}</p> */}
                                         </Link>
-                                        <span>
+                                        <span style={{display: "flex"}}>
                                             <button className="btn1 up_btn"  onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button>
+                                            <p className="card-text price" style={{marginLeft: "130px"}}>{id.price} 元</p>
                                         </span>
                                         
                                         

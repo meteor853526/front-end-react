@@ -136,8 +136,8 @@ img {
 }
 .product_container{
   display: flex;
-  width: 15vw;
-  height: 30vh;
+  width: 20vw;
+  height: 45vh;
   flex-flow: wrap;
   
  
@@ -151,7 +151,7 @@ img {
 .product_row{
   display: flex;
   width: 30vw;
-  height: 30vh;
+  
   flex-flow: wrap;
   
 }
@@ -370,4 +370,8 @@ h2{
 }
 .coffee_word{
   border-color:#e2ebf0 #e2ebf0 #e2ebf0 red;border-width:3px;border-style:solid;padding:5px;
+}
+
+.price{
+  color:red
 }
