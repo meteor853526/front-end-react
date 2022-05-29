@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import './css/index.css';
 import './css/nav.css';
+
 import './css/init.css'
 import './css/ProducrPage.css'
 import App from './App';
