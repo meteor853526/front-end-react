@@ -137,7 +137,7 @@ img {
 .product_container{
   display: flex;
   width: 20vw;
-  height: 45vh;
+  height: 40vh;
   flex-flow: wrap;
   
  
@@ -175,6 +175,10 @@ img {
 .try{
 
   z-index:1;
+}
+
+.img_test{
+  /* margin-left:2vw; */
 }
 input[type="radio"] {
   display: none;
@@ -275,6 +279,7 @@ body {
   font-size: 1.2em;
   color: #000;
 }
+
 
 .price {
   color: var(--secondary-color);

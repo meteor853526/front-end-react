@@ -24,6 +24,7 @@ import Buyer from './buyer/Buyer'
 import BuyerCenter from './buyer/BuyerCenter'
 import BuyerOrder from './buyer/BuyerOrder'
 import ListComment from './product/ListComment'
+import ProductPage from './product/ProductPage'
 import {
   BrowserRouter as Router,
   Routes,
@@ -49,7 +50,7 @@ function App() {
               <Route path="/product" element={<ContentComponent user={state}/>}/>
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
               <Route path="/ListComment" element={<ListComment/>}/>
-
+              <Route path="/ProductPage" element={<ProductPage/>}/>
               <Route path="/Seller" element={state2.user2 ? <Seller/> : <LoginSeller/>}/>
               <Route path="/BuyerOrder" element={state.user ? <BuyerOrder user={state}/> : <Login/>}/>
               <Route path="/buyer" element={state.user ? <Buyer user={state}/> : <Login/>}/>
