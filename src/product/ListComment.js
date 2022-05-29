@@ -31,44 +31,10 @@ const ListComment =()=> {
         })
         .catch(function (error) {
             console.log(error);
-            alert('請先登入會員');
+  
 
         });
     },[])
-
-    
-   
-
-    // const submitHandler =(id,name,price) =>{
-       
-
-    //     axios({
-    //         url: 'http://localhost:8080/api/v1/Shop_Car/addcar',
-    //         method: "POST",
-            
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         params:{
-    //             'email':props.user.user,
-    //             'productid':id,
-    //             'productName' : name,
-    //             'price' :price
-    //         }
-    //     })
-    //     .then(function (response) {
-    //         console.log(response);
-    //         alert('Add Success');
-            
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //         alert('請先登入會員');
-
-    //     });
-    // }
-
-    //const notify = () => toast("Wow so easy!");
     return ( 
 
     <div>
