@@ -32,10 +32,10 @@ const Check_type =() =>{
     
         
     return ( 
-        <div class="" style={{"width":"80vw"}}>
+        <div class="all" style={{"width":"500px"}}>
 
         
-            <div>
+            <div className="check_type">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="form-check">
@@ -100,7 +100,7 @@ const Check_type =() =>{
                 
             </div>
             <h1>------------------</h1>
-            <div class="">
+            <div className="check_type">
                 <ul class="list-group">
                         <li class="list-group-item">
                             <div class="form-check">

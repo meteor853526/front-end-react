@@ -76,29 +76,26 @@ const ListComment =()=> {
         id.map(
             id=>
 
-            <div class="li">
+            <div class="li" style={{width : "55vw"}}>
                 <div class="user">
                     <img class="user-img" src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
                         <div>
-                            <div>G****y</div>
-                            <div>March 18, 2022</div>
+                            <div>{id.buyer}</div>
+                            <div>{id.time}</div>
                         </div>
                         </div>
                         <div class="comment">
                         <div>
                             <ReactStars
                                 count={5}
-                                value={4}
+                                value={id.star}
                                 edit={false}
                                 size={24}
                                 activeColor="#ffd700"
                             />
-                            <img class="star" src="media/star-full.svg" alt=""/>
-                            <img class="star" src="media/star-full.svg" alt=""/>
-                            <img class="star" src="media/star-empty.svg" alt=""/>
-                            <img class="star" src="media/star-empty.svg" alt=""/>
+                            
                         </div>
-                    <div>滿意 衣服很舒服</div>
+                    <div>{id.content}</div>
                 </div>
             </div>   
         )

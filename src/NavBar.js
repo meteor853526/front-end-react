@@ -29,10 +29,10 @@ const NavBar = (props) => {
                     <img src={require('./img/icon.png')} alt=""/>
                 </a>
                 <div class="index wrap_bar">
-                    <a href="/product" alt="" class="index">商店</a>
+                    <Link to="/product" alt="" class="index">商店</Link>
                     <Link class="index" to={url} onClick={check}>查看購物車</Link>
                     {/* <a href="/list_car" alt="" class="index">購物車</a> */}
-                    <a href="/BuyerOrder" alt="" class="index">訂單查詢</a>
+                    <Link to="/BuyerOrder" alt="" class="index">訂單查詢</Link>
                 </div>
                 
                 <div class="nav-menu">

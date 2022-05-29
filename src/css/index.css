@@ -143,6 +143,16 @@ img {
  
   padding:5px;
 }
+.all{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width: 40vw;
+  flex-direction: column;
+}
+.check_type{
+  width: 40vw;
+}
 /* .row{
   display: flex;
   width: 30vw;

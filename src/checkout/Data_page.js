@@ -104,14 +104,14 @@ const DataPage = (props) => {
                 <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">姓氏</span>
                 <input type="text" class="form-control" placeholder="Username" value={Fname}aria-label="Username" aria-describedby="basic-addon1"onChange={e => setFname(e.target.value)}/>
-                <h1>{Fname}</h1>
+                
                 </div>
                 {/* <h1>{moment().format('YYYY-MM-DD HH:mm:ss')}</h1> */}
                 <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">名字</span>
                 <input type="text" class="form-control" placeholder="Recipient's username"value={Lname} aria-label="Recipient's username" aria-describedby="basic-addon2"onChange={e => setLname(e.target.value)}/>
                 {/* <span class="input-group-text" id="basic-addon2"></span> */}
-                <h1>{Lname}</h1>
+              
                 </div>
 
                 <label for="basic-url" class="form-label">聯絡資訊及地址</label>
