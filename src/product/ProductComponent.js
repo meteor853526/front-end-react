@@ -68,7 +68,8 @@ const Product_component =(props)=> {
                 'email':props.user.user,
                 'productid':id,
                 'productName' : name,
-                'price' :price
+                'price' :price,
+                'number':1
             }
         })
         .then(function (response) {

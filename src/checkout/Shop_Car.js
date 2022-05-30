@@ -195,9 +195,9 @@ const Shop_Car =(props)=> {
                                 <h5 class="mb-1"> {id.productName}</h5>
                                 <p class="mb-1 text-end">價格 : {id.price}</p>
                                 <div class="flex_cut">
-                                    <button class="btn btn-outline-success" style={{'height':"10%" , 'padding' : "10px"}} onClick ={() => changeHandler1(id.id)}>+</button>
+                                    <button class="btn-outline-success" style={{'height':"10%" , 'padding' : "10px"}} onClick ={() => changeHandler1(id.id)}>+</button>
                                     <h4>{id.number}</h4>
-                                    <button class="btn btn-outline-success" onClick ={() => changeHandler2(id.id,id.number)}>-</button>
+                                    <button class="btn-outline-success" onClick ={() => changeHandler2(id.id,id.number)}>-</button>
                                 </div>
                                     
                                 {/* <small class="text-muted">And some muted small print.</small> */}
@@ -211,11 +211,11 @@ const Shop_Car =(props)=> {
                 </div>
                 
             </div>
-            <div className="">
+            <div className="hidden">
                 <h5>{count}</h5>
                 
             </div>
-            <Link to='/Check_type' className="btn1"><button className="btn1">下一步</button></Link>
+            <Link to='/Check_type' className="btn1 hidden"><button className="btn1">下一步</button></Link>
            
         </div>
         
