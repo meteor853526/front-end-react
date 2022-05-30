@@ -26,10 +26,11 @@ dispatch2(startSellerlogin());
         .then(function (res) {
             console.log(res);
             dispatch2(successSellerlogin(userCredentials2.email));
-
+            alert("登入成功");
         })
         .catch(function (error) {
             console.log(error);
+            alert("密碼錯誤");
         });
 
 

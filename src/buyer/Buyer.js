@@ -13,6 +13,7 @@ const $ = require('jquery')
 $.DataTable = require('datatables.net')
 const Buyer = (props) => {
     let history=useNavigate();
+    console.log(props.user.user)
     const [id, setid] = useState([])
     const [orderid, setorderid] = useState()
     const [value, setvalue] =useState(-1)
@@ -40,7 +41,8 @@ const Buyer = (props) => {
         .then(function (res) {
            
 
-            console.log(id)
+            console.log(res.data)
+            console.log("??" + props.user.user)
             // console.log(res.data)
             // console.log(tableRef.current)
             setid(res.data);

@@ -90,9 +90,10 @@
   width: 100%;
 }
 
-.main-Register .right-side .body-right .container {
+.main-Register .right-side .body-right .container_reg {
   height: 80%;
   width: 60%;
+
   margin: 2rem auto;
   padding-top: 1rem;
   -webkit-box-shadow: 0rem 0rem 2rem 0.1rem #48ea98;
@@ -100,12 +101,12 @@
   border-radius: 0.5rem;
 }
 
-.main-Register .right-side .body-right .container .input-group {
+.main-Register .right-side .body-right .container_reg .input-group {
   width: 100%;
   position: relative;
 }
 
-.main-Register .right-side .body-right .container .input-group h5 {
+.main-Register .right-side .body-right .container_reg .input-group h5 {
   font-size: small;
   font-weight: 300;
   color: gray;
@@ -116,7 +117,7 @@
   background: white;
 }
 
-.main-Register .right-side .body-right .container .input-group input {
+.main-Register .right-side .body-right .container_reg .input-group input {
   margin: 1.2rem auto;
   width: 60%;
   border: none;
@@ -125,7 +126,7 @@
           box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem gray;
 }
 
-.main-Register .right-side .body-right .container .input-group input:focus {
+.main-Register .right-side .body-right .container_reg .input-group input:focus {
   outline: none;
 }
 

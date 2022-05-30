@@ -6,31 +6,24 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// class Toast extends React.Component {
-//     render() {
-//       return (
-//         <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-//         <div class="toast-header">
-//           {/* <img src="..." class="rounded me-2" alt="..."> */}
-//           <strong class="me-auto">Bootstrap</strong>
-//           <small>11 mins ago</small>
-//           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-//         </div>
-//         <div class="toast-body">
-//           Hello, world! This is a toast message.
-//         </div>
-//       </div>
-//       );
-//     }
-//   }
+import { BarLoader,DoubleBubble, SlidingPebbles ,DoubleOrbit} from 'react-spinner-animated';
+
+
+function Wait(){
+    return(
+        <DoubleOrbit text={"Loading..."} bgColor={"#F0A500"} center={false} width={"150px"} height={"150px"}/>
+    )
+}
+
 
 
 const Product_component =(props)=> {
-
+    
     const [id, setid] = useState([])
     const [msg, setmsg] = useState('')
     useEffect(() =>{
         getservice()
+        Wait()
     },[])
 
     
@@ -41,18 +34,6 @@ const Product_component =(props)=> {
             console.log(response.data)
         })
     }
-
-    // const toast = <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    //                 <div class="toast-header">
-    //                 {/* <img src="..." class="rounded me-2" alt="..."> */}
-    //                 <strong class="me-auto">Bootstrap</strong>
-    //                 <small>11 mins ago</small>
-    //                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    //                 </div>
-    //                 <div class="toast-body">
-    //                 Hello, world! This is a toast message.
-    //                 </div>
-    //             </div>
 
     const submitHandler =(id,name,price) =>{
        
@@ -88,6 +69,8 @@ const Product_component =(props)=> {
     return ( 
 
         <div id="products">
+            {id === null? <Wait/> : '????'}
+           
             {
                 id.map(
                     id=>    

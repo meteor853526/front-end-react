@@ -20,14 +20,8 @@ const Content_Component = (props) =>{
             console.log(response.data)
         })
     }
-    // fetch("http://localhost:8080/api/v1/student"),{
-    //     method: "GET",
-    //     headers: {"Content-Type": "application/json"},
-    //     body: JSON.stringify("id")
-
-    // }).then(() => {
-    //     console.log("??")
-    // }
+   
+    
     return ( 
 
 
@@ -36,7 +30,7 @@ const Content_Component = (props) =>{
                 <div className="row side-flex">
                     <div className="col-2">
                         <div className="list_category_flex side">
-                            {/* <h1>{user.user? 'none' : }</h1> */}
+                            
                             <button type="button" className="side col">所有分類</button>
                             <div className="list_category_flex">
                                 <a className="category_1" alt="" href="http://">書籍及雜誌期刊</a>

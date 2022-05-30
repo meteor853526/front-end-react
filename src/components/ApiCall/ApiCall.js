@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-
+import { useNavigate } from 'react-router-dom';
 import {startBuyerlogin,successBuyerlogin,failedBuyerlogin} from '../Actions/Actions'
 export const ApiCall=async(userCredentials,dispatch)=>{
 dispatch(startBuyerlogin(userCredentials));
@@ -25,11 +25,13 @@ dispatch(startBuyerlogin(userCredentials));
         })
         .then(function (res) {
             console.log(res);
+            
             dispatch(successBuyerlogin(userCredentials.email));
-
+            alert("登入成功");
         })
         .catch(function (error) {
             console.log(error);
+            alert("密碼錯誤");
         });
 
 
