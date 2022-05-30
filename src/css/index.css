@@ -390,3 +390,31 @@ h2{
 .price{
   color:red
 }
+#info {
+  margin: 0 auto 5vh auto;
+  width: 86vw;
+  border-bottom: #8b8b8b 1px solid;
+  padding-bottom: 2vh;
+}
+
+#info>div {
+  width: 500px;
+  display: flex;
+  padding: 2vh 5vw;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#info h2 {
+  margin-top: 1vh;
+}
+
+#info img {
+  width: 100px;
+  max-width: 80vw;
+  border-radius: 100%;
+}
+
+#seller_info {
+  margin-left: 3vw;
+}

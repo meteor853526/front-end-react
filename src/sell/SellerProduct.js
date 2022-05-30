@@ -36,40 +36,48 @@ const SellerProduct = (props) => {
     },[props.user.user2])
 
     return ( 
-        <div className="row_product">
-            {
-                id.map(
-                    
-                    id => 
-                        <div className="product_container" >
-                            <div className="row product_row">
-                                <div className="col">
-                                <div className="card" >
-                                    <img  src={ `data:image/jpeg;base64,${id.image}`}  style={{width:100, height:100}} resizeMode="cover" alt=""/>
-                                    <div className="card-body">
-                                        
-                                        <h5 className="card-title">{id.id} {id.name}</h5>
-                                        <p className="card-text">{id.price}</p>
-                                        <p className="card-text">{id.introduce}{id.type}</p>
-                                       
-                                        <p className="card-text">{id.number}</p>
-
-                                        {/* <button className="btn1"  onClick={() => submitHandler(id.id,id.name)}>加入購物車</button> */}
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                        <div className="">
+        <div>  
+            <div id="info">
+            <div>
+                <img src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
+                <div id="seller_info">
+                    <h2>賣家:         </h2>
+                    <h2>{props.user.user2}</h2>
+     
+                </div>
+                </div>
+            </div>
+            <Link to="/AddProduct" className="btn1"><button className="btn1">上架商品</button></Link>
+        
+            <div id="products">
+                
+                {
+                    id.map(
                         
-                        </div>
+                        id => 
+                        <div>
+                        <Link to='/ProductPage' state={{productid: id.id, introduce: id.introduce,name:id.name,price:id.price}}>
+                            <div class="img-cover">
+                                <img  src={ `data:image/jpeg;base64,${id.image}`}   resizeMode="" alt=""/>
+                            </div>
+                        </Link>
+                            <div class="info">
+                                <div class="seller">{id.owner} (owner)</div>
+                                <div class="title">{id.name}</div>
+                            </div>
+                            <span style={{display: "flex"}}>
+                            
+                                <p className="card-text price" style={{marginLeft: "130px"}}>{id.price} 元</p>
+                            </span>
+                            
+                            
                     </div>
-                    
-                    
-                )
-            }
-            <Link to="/AddProduct" className="btn1"><button className="btn1">增加</button></Link>
+                        
+                        
+                    )
+                }
+               
+            </div>
         </div>
         
         

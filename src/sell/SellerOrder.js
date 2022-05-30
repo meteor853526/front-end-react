@@ -79,6 +79,18 @@ const SellerOrder = (props) => {
     }
    
     return ( 
+        <div>
+            <div id="info">
+            <div>
+                <img src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
+                <div id="seller_info">
+                    <h2>賣家:         </h2>
+                    <h2>{props.user.user2}</h2>
+     
+                </div>
+                </div>
+            </div>
+        
         <div className="row_product">
             <h1>當前訂單</h1>
             <table class="table">
@@ -129,6 +141,7 @@ const SellerOrder = (props) => {
                 </table>
             
             
+        </div>
         </div>
         
         

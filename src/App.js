@@ -51,14 +51,15 @@ function App() {
               <Route path="/AddProduct" element={<AddProduct user={state2}/> }/>
               <Route path="/ListComment" element={<ListComment/>}/>
               <Route path="/ProductPage" element={<ProductPage/>}/>
-              <Route path="/Seller" element={state2.user2 ? <Seller/> : <LoginSeller/>}/>
+              <Route path="/Seller" element={state2.user2 ? <Seller user={state2}/> : <LoginSeller/>}/>
+
               <Route path="/BuyerOrder" element={state.user ? <BuyerOrder user={state}/> : <Login/>}/>
               <Route path="/buyer" element={state.user ? <Buyer user={state}/> : <Login/>}/>
               <Route path="/buyerCenter" element={state.user ? <BuyerCenter user={state}/> : <Login/>}/>
               <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
 
-              <Route path="/loginSeller" element={state2.user2 ?  <Seller/> : <LoginSeller/> } />
+              <Route path="/loginSeller" element={state2.user2 ?  <Seller user={state2}/> : <LoginSeller/> } />
 
               <Route path="/RegisterSeller" element={<RegisterSeller/>} />
               <Route path="/Check_type" element={<CheckType/>}/>

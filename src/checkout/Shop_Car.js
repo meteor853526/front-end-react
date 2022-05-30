@@ -5,13 +5,35 @@ import shop_service from "../services/shop_service";
 import axios from 'axios';
 import FormData from 'form-data'
 import CheckType from "./Check_type";
+
 import {
     BrowserRouter as Router,
     Routes,
     Route,
   } from "react-router-dom";
 var count = 0
-const Shop_Car =(props)=> {
+
+function Hidden(){
+    return (
+        <div>
+            <div className="" id ="">
+                <h5>{count}</h5>
+               
+            </div>
+            <Link to='/Check_type' className="btn1 " id =""><button className="btn1" id ="">下一步</button></Link>
+        </div>
+    )
+}
+
+
+function Show() {
+    return(
+        <h1>購物車裡沒有東西喔~</h1>
+    )
+}
+
+
+function Shop_Car (props){
     
     const [id, setid] = useState([])
     
@@ -29,10 +51,8 @@ const Shop_Car =(props)=> {
         })
         .then(function (res) {
             setid(res.data);
-            count = 0
-            id.map(id=>count += id.price)
-            console.log(count);
-          
+            
+            
         })
         .catch(function (error) {
             console.log(error);
@@ -67,9 +87,7 @@ const Shop_Car =(props)=> {
             })
             .then(function (res) {
                 setid(res.data);
-                count = 0;
-                id.map(id=>count += id.price)
-                console.log(count);
+                
                 
             })
             .catch(function (error) {
@@ -112,10 +130,7 @@ const Shop_Car =(props)=> {
                     })
                     .then(function (res) {
                         setid(res.data);
-                        console.log(res.data);
-                        count = 0
-                        id.map(id=>count += id.price)
-                        console.log(count);
+                        
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -153,9 +168,9 @@ const Shop_Car =(props)=> {
                 .then(function (res) {
                     setid(res.data);
                     //console.log(...id);
-                    count = 0
-                    id.map(id=>count += id.price)
-                    console.log(count);
+                    
+                  
+             
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -177,11 +192,12 @@ const Shop_Car =(props)=> {
             <div className="">
                 
                 <div class="list-group" style={{'width' : "50vw" }}>
-
-            
+                <p class="mb-1 text-end" style ={{display : 'none'}}>價格 : {count = 0}</p>
+                
                 
                 {
                     id.map(
+                         
                         id => 
                                 
                                 
@@ -189,18 +205,20 @@ const Shop_Car =(props)=> {
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">商品編號 : {id.productid} </h5>
                                     
-                                    {/* <small class="text-muted">3 days ago</small> */}
                                    
+                                
                                 </div>
                                 <h5 class="mb-1"> {id.productName}</h5>
-                                <p class="mb-1 text-end">價格 : {id.price}</p>
+                                
+                                <p class="mb-1 text-end" >價格 : {id.price * id.number}</p>
+                                <p class="mb-1 text-end" style ={{display : 'none'}}>價格 : {count += (id.price * id.number)}</p>
                                 <div class="flex_cut">
                                     <button class="btn-outline-success" style={{'height':"10%" , 'padding' : "10px"}} onClick ={() => changeHandler1(id.id)}>+</button>
                                     <h4>{id.number}</h4>
                                     <button class="btn-outline-success" onClick ={() => changeHandler2(id.id,id.number)}>-</button>
                                 </div>
                                     
-                                {/* <small class="text-muted">And some muted small print.</small> */}
+                            
                                 </a>
                                 
                             
@@ -211,11 +229,13 @@ const Shop_Car =(props)=> {
                 </div>
                 
             </div>
-            <div className="hidden">
+            {count === 0 ? <Show/>: <Hidden/>  }
+             
+            {/* <div className="hidden" id ="hidden">
                 <h5>{count}</h5>
                 
             </div>
-            <Link to='/Check_type' className="btn1 hidden"><button className="btn1">下一步</button></Link>
+            <Link to='/Check_type' className="btn1 hidden" id ="hidden"><button className="btn1" id ="hidden">下一步</button></Link> */}
            
         </div>
         
