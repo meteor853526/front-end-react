@@ -92,7 +92,7 @@ const SellerOrder = (props) => {
             </div>
         
         <div className="row_product">
-            <h1>當前訂單</h1>
+            <h2>當前訂單</h2>
             <table class="table">
                 <thead>
                     <tr>

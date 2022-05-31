@@ -118,7 +118,7 @@ class AddProduct extends Component {
         return ( 
         <div style={{display : "flex", justifyContent:"center"}}>
             <div class="card ">
-                {this.props.user.user2}
+             
                 <div class="card-header">
                     <p class="h4 mb-2 text-center">Add Product</p>
                 </div>

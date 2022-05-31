@@ -69,7 +69,7 @@ const Product_component =(props)=> {
     return ( 
 
         <div id="products">
-            {id === null? <Wait/> : '????'}
+            {/* {id === null? <Wait/> : '????'} */}
            
             {
                 id.map(
