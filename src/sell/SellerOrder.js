@@ -35,7 +35,7 @@ const SellerOrder = (props) => {
 
     },[props.user.user])
 
-
+    console.log(props.user.user)
 
     const changeHandler =(id) =>{
         axios({
