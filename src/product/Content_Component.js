@@ -5,8 +5,8 @@ import testservice from '../services/testservice';
 import ProductComponent from './ProductComponent.js';
 
 
-function Content_Component() {
-
+const Content_Component = (props) =>{
+    // const user = props.user;
     const [id, setid] = useState([])
 
     useEffect(() =>{
@@ -20,22 +20,17 @@ function Content_Component() {
             console.log(response.data)
         })
     }
-    // fetch("http://localhost:8080/api/v1/student"),{
-    //     method: "GET",
-    //     headers: {"Content-Type": "application/json"},
-    //     body: JSON.stringify("id")
-
-    // }).then(() => {
-    //     console.log("??")
-    // }
+   
+    
     return ( 
 
 
-        <div className="product_body" style={{width:"80vw"}}>
+        <div className="product_body" style={{width:"80vw" ,'margin-left':'10vw'}}>
             <div className="container-fluid">
                 <div className="row side-flex">
                     <div className="col-2">
                         <div className="list_category_flex side">
+                            
                             <button type="button" className="side col">所有分類</button>
                             <div className="list_category_flex">
                                 <a className="category_1" alt="" href="http://">書籍及雜誌期刊</a>
@@ -128,7 +123,7 @@ function Content_Component() {
                     
                     <div className="col-10 ">
                         <div className="">
-                            <ProductComponent className="row_product"/>
+                            <ProductComponent user = {props.user}className="row_product"/>
                         </div>
                         
                     </div>
