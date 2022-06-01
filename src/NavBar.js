@@ -11,6 +11,7 @@ const NavBar = (props) => {
     const user2 = props.tp;
     // console.log(user.user);
     const stateURL = user.user? "/logout" :"/login"
+    
     const [url , seturl ] = useState("/list_car")
     
     const check = () =>{
@@ -32,7 +33,7 @@ const NavBar = (props) => {
                     <Link to="/product" alt="" class="index">商店</Link>
                     <Link class="index" to={url} onClick={check}>查看購物車</Link>
                     {/* <a href="/list_car" alt="" class="index">購物車</a> */}
-                    <Link to="/BuyerOrder" alt="" class="index">訂單查詢</Link>
+                    <Link to="/BuyerOrder" alt="" class="index"onClick={check}>訂單查詢</Link>
                 </div>
                 
                 <div class="nav-menu">
@@ -48,7 +49,7 @@ const NavBar = (props) => {
                             <a href="/">
                             <img class="user-img" src="https://static.shoplineapp.com/web/assets/misc/product-review-default-avatar.svg" alt=""/>
                             
-                            <span>登入</span>
+                            <span>{user.user? user.user: "登入"}</span>
                             </a>
                             <ul>
                                 <li className="drop"><a href="/login">會員登入</a>

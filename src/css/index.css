@@ -418,3 +418,17 @@ h2{
 #seller_info {
   margin-left: 3vw;
 }
+
+.all_price{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 100px;
+  border-style : solid ; 
+  border-color : black #e2ebf0 #e2ebf0 #e2ebf0 ;  /* 上紅、右綠、下藍、左黃*/
+}
+.cus_btn{
+  border:0;
+background-color:#003C9D;
+color:#fff;border-radius:10px;
+}

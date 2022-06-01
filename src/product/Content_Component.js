@@ -30,81 +30,38 @@ const Content_Component = (props) =>{
                 <div className="row side-flex">
                     <div className="col-2">
                         <div className="list_category_flex side">
-                            
-                            <button type="button" className="side col">所有分類</button>
+                        
+                            <h2>分類(書籍)</h2>
                             <div className="list_category_flex">
-                                <a className="category_1" alt="" href="http://">書籍及雜誌期刊</a>
-                                <a className="category_1" alt="" href="http://">其他書籍</a>
-                                <a className="category_1" alt="" href="http://">商業理財書籍</a>
-                                <a className="category_1" alt="" href="http://">文學小說</a>
-                                <a className="category_1" alt="" href="http://">漫畫</a>
+                                <a className="category_1" alt="" >財經投資</a>
+                                <a className="category_1" alt="" >語言學習</a>
+                                <a className="category_1" alt="" >行銷企管</a>
+                                <a className="category_1" alt="" >文學小說</a>
+                                <a className="category_1" alt="" >自然人文</a>
                             </div>
                         </div>
 
-                        <div className="side">
-                            <h5>條件篩選</h5>
-                            <font className="">出貨地點</font>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked></input>
-                                <label className="form-check-label" for="flexCheckChecked">
-                                    Checked checkbox
-                                </label>
+                        <div className="list_category_flex side">
+                        
+                            <h2>分類(雜誌)</h2>
+                            <div className="list_category_flex">
+                                <a className="category_1" alt="" >中文雜誌</a>
+                                <a className="category_1" alt="" >英文雜誌</a>
+                                <a className="category_1" alt="">藝文雜誌</a>
+                                <a className="category_1" alt="" >外文雜誌</a>
+                                <a className="category_1" alt="" >商業週刊</a>
                             </div>
                         </div>
-                        <div className="side">
-                            
-                            <font className="">運送方式</font>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked></input>
-                                <label className="form-check-label" for="flexCheckChecked">
-                                    Checked checkbox
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                        </div>
-                        <div className="side">
-                            
-                            <font className="">品牌</font>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked></input>
-                                <label className="form-check-label" for="flexCheckChecked">
-                                    Checked checkbox
-                                </label>
+
+                        <div className="list_category_flex side">
+                        
+                            <h2>分類(CD音樂)</h2>
+                            <div className="list_category_flex">
+                                <a className="category_1" alt="" >古典音樂</a>
+                                <a className="category_1" alt="" >亞洲音樂</a>
+                                <a className="category_1" alt="" >西洋音樂</a>
+                                <a className="category_1" alt="" >爵士音樂</a>
+                                <a className="category_1" alt="" >黑膠唱片</a>
                             </div>
                         </div>
                         <div className="side">
@@ -117,7 +74,7 @@ const Content_Component = (props) =>{
                             </div>
                             
                         </div>
-                        <Link to="/AddProduct" className="btn1"><button className="btn1">增加</button></Link>
+                      
                     </div>
                     
                     

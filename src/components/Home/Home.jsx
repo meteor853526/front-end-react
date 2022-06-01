@@ -9,10 +9,10 @@ function Home() {
       
         <div>
           
-          <h5>你好,使用者: {state.user}</h5>
+          <h2>welcomeimg</h2>
           <ContentComponent user={state}/>
           {/* <h1>{state.user}</h1> */}
-          <h1>welcomeimg</h1>
+          
 
         </div>
     )

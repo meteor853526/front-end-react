@@ -5,6 +5,7 @@ import testservice from '../services/testservice';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import { BarLoader,DoubleBubble, SlidingPebbles ,DoubleOrbit} from 'react-spinner-animated';
 
@@ -67,8 +68,11 @@ const Product_component =(props)=> {
 
     const notify = () => toast("Wow so easy!");
     return ( 
-
+        <div>
+            <h2> 所有商品: </h2>
+        
         <div id="products">
+            
             {/* {id === null? <Wait/> : '????'} */}
            
             {
@@ -85,12 +89,14 @@ const Product_component =(props)=> {
                                 <div class="title">{id.name}</div>
                             </div>
                             <span style={{display: "flex"}}>
-                                <button className="btn1 up_btn"  style={{marginLeft: "10px"}} onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button>
-                                <p className="card-text price" style={{marginLeft: "130px"}}>{id.price} 元</p>
+                                <a onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } alt="" ><img src={require('../img/car.jpg')}alt="" style={{width:'4vw',height: '8vh'}}/></a>
+                                {/* <button className="btn1 up_btn"  style={{marginLeft: "10px"}} onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button> */}
+                                <p className="card-text price" style={{marginLeft: "140px"}}>{id.price} 元</p>
                             </span>
                             
                             
                     </div>
+                    
 
                 )
 
@@ -99,7 +105,7 @@ const Product_component =(props)=> {
 
             }
 
-            
+</div>
         </div>
 
 

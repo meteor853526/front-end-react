@@ -10,8 +10,7 @@ function Register() {
     
 
 const[email,setemail]=useState('');
-const[Fusername,setFusername]=useState('');
-const[Susername,setSusername]=useState('');
+
 const[pwd1,setpwd1]=useState('');
 const[pwd2,setpwd2]=useState('');
 

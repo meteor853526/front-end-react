@@ -32,9 +32,13 @@ const Check_type =() =>{
     
         
     return ( 
-        <div class="all" style={{"width":"500px"}}>
+        <div>
 
+       
         
+        <div class="all" style={{"width":"500px"}}>
+            <h2>選擇結帳方式</h2>
+            
             <div className="check_type">
                 <ul class="list-group">
                     <li class="list-group-item">
@@ -99,8 +103,9 @@ const Check_type =() =>{
                     
                 
             </div>
-            <h1>------------------</h1>
-            <div className="check_type">
+
+            <div className="check_type" style={{marginTop:'100px'}}>
+                <h2 style={{marginleft:"100px"}}>選擇運送方式</h2>
                 <ul class="list-group">
                         <li class="list-group-item">
                             <div class="form-check">
@@ -129,18 +134,19 @@ const Check_type =() =>{
                         </li>
                         <li class="list-group-item">
                             <div class="form-check">
-                            <input class="form-check-input" type="radio"value="全家取貨" name="delivery_type" id="flexRadioDefault10"disabled onChange={() => setdelivery_type("全家取貨")}/>
+                            <input class="form-check-input" type="radio"value="全家取貨" name="delivery_type" id="flexRadioDefault10" onChange={() => setdelivery_type("全家取貨")}/>
                             <label class="form-check-label" for="flexRadioDefault10">
                                 全家取貨
                             </label>
                             </div>
                         </li>  
                     </ul>
-                    <h1>{pay_type}</h1>
+                   
 
                     <Link to='/Data_page'
-                          state={{ pay_type : pay_type, delivery_type:delivery_type }} className="btn1"><button className="btn1"  onClick={() => submitHandler()}>下一步</button></Link>
+                          state={{ pay_type : pay_type, delivery_type:delivery_type }} className="cus_btn"><button className="cus_btn"  onClick={() => submitHandler()}>填寫配送資料</button></Link>
             </div>
+        </div>
         </div>
         );
     

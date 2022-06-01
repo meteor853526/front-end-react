@@ -100,6 +100,7 @@ const DataPage = (props) => {
         
         return ( 
             <div class="">
+                
                 {/* <h1>{this.props.pay_type}</h1> */}
                 <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">姓氏</span>

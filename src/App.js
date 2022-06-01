@@ -62,8 +62,8 @@ function App() {
               <Route path="/loginSeller" element={state2.user2 ?  <Seller user={state2}/> : <LoginSeller/> } />
 
               <Route path="/RegisterSeller" element={<RegisterSeller/>} />
-              <Route path="/Check_type" element={<CheckType/>}/>
-              <Route path="/Data_page" element={<DataPage  user={state} />}/>
+              <Route path="/Check_type" element={state.user ?<CheckType/> : <Login/>}/>
+              <Route path="/Data_page" element={state.user ? <DataPage  user={state} /> : <Login/>}/>
 
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
               <Route path="/list_car" element={state.user ? <ShopCar user={state}/>  : <Login/>}/>
