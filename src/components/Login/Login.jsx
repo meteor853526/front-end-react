@@ -8,12 +8,8 @@ import { ApiCall } from '../ApiCall/ApiCall';
 import {useSelector,useDispatch} from 'react-redux';
 // import {useHistory} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-function Login(props) {
-const location = useLocation();
-//const { passEmail,passPwd } = location.state;
-if(props.state !== undefined){
-    console.log(props.state.email)
-}
+function Login() {
+
 
 const state = useSelector(state => state.UserReducer);
 
