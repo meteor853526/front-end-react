@@ -20,10 +20,10 @@ const Buyer_nav = (props) => {
    
     return ( 
      
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle  button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" />
             <Link to="/buyerCenter"><label class="btn btn-outline-primary" for="btnradio1">Radio 1</label></Link>
-
+            <div></div>
             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
             <Link to="/buyer"><label class="btn btn-outline-primary" for="btnradio2">Radio 2</label></Link>
 
