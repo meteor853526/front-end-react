@@ -15,56 +15,7 @@ const ProduntPage =(props)=> {
 
 
 
-    useEffect(() =>{
-        
 
-    },[])
-
-    
-    
-
-    // const toast = <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    //                 <div class="toast-header">
-    //                 {/* <img src="..." class="rounded me-2" alt="..."> */}
-    //                 <strong class="me-auto">Bootstrap</strong>
-    //                 <small>11 mins ago</small>
-    //                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    //                 </div>
-    //                 <div class="toast-body">
-    //                 Hello, world! This is a toast message.
-    //                 </div>
-    //             </div>
-
-    // const submitHandler =(id,name,price) =>{
-       
-
-    //     axios({
-    //         url: 'http://localhost:8080/api/v1/Shop_Car/addcar',
-    //         method: "POST",
-            
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         params:{
-    //             'email':props.user.user,
-    //             'productid':id,
-    //             'productName' : name,
-    //             'price' :price
-    //         }
-    //     })
-    //     .then(function (response) {
-    //         console.log(response);
-    //         alert('Add Success');
-            
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //         alert('請先登入會員');
-
-    //     });
-    // }
-
-    //const notify = () => toast("Wow so easy!");
     return ( 
         <div>
             <div id="img_over">

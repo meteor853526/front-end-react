@@ -1,14 +1,20 @@
 import React,{useState,useEffect,useRef} from 'react';
 import './log.css';
 //import styles from './log.module.css'
-import {Link} from 'react-router-dom';
+import {Link,useLocation } from 'react-router-dom';
 import logo from './logoPng.png';
 import welcomeimg from './welcomeback.svg';
 import { ApiCall } from '../ApiCall/ApiCall';
 import {useSelector,useDispatch} from 'react-redux';
 // import {useHistory} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-function Login() {
+function Login(props) {
+const location = useLocation();
+//const { passEmail,passPwd } = location.state;
+if(props.state !== undefined){
+    console.log(props.state.email)
+}
+
 const state = useSelector(state => state.UserReducer);
 
 const dispatch = useDispatch();
