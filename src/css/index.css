@@ -432,3 +432,8 @@ h2{
 background-color:#003C9D;
 color:#fff;border-radius:10px;
 }
+.data_page{
+  padding:20px;
+  border-style : solid ; 
+  border-color : white white white white ; 
+}
