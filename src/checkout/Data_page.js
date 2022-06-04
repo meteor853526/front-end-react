@@ -43,26 +43,7 @@ const DataPage = (props) => {
         });
 
     },[props.user.user])
-    //var {id,name,age} = data;
-    // constructor(props) {
-    //     super(props);
-        
-    //     console.log(this.props.location.state)
-    //     this.state = {
-    //         Fname:'',
-    //         Lname:'',
-    //         phone:0,
-    //         address:'',
-    //         type:'',
-    //         Pay_type:'',
-    //         time:'',
-    //         productid:0,
-
-    //     }
-    // }
     
-  
-        //var data = this.props.location.state;
     
     
     const check =()=> {

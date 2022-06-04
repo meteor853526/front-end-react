@@ -7,12 +7,12 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import { BarLoader,DoubleBubble, SlidingPebbles ,DoubleOrbit} from 'react-spinner-animated';
+import { BarLoader,DoubleBubble, SlidingPebbles ,DoubleOrbit,Spinner} from 'react-spinner-animated';
 
 
 function Wait(){
     return(
-        <DoubleOrbit text={"Loading..."} bgColor={"#F0A500"} center={false} width={"150px"} height={"150px"}/>
+        <Spinner className="waiting" text={"Loading..."} bgColor={"white"} center={true} width={"150px"} height={"150px"}/>
     )
 }
 
@@ -20,20 +20,81 @@ function Wait(){
 
 const Product_component =(props)=> {
     
-    const [id, setid] = useState([])
+    console.log(props.type)
+    const [id, setid] = useState(null)
+    const [space, setspace] = useState("?")
     const [msg, setmsg] = useState('')
     useEffect(() =>{
         getservice()
         Wait()
-    },[])
+        console.log('???')
+    },[props.type])
 
-    
+    useEffect(() => {
+        reset()
+    }, []);
+
+    useEffect(() => {
+        respace()
+    }, []);
     const getservice = () =>{
         
-        testservice.getservice().then((response) =>{
-            setid(response.data);
-            console.log(response.data)
-        })
+
+        if(props.type === "all"){
+            testservice.getservice().then((response) =>{
+                reset();
+                setid(response.data);
+                console.log(response.data)
+                respace("have")
+            })
+        }else{
+            reset();
+            setid(null);
+            if(id === null){
+                console.log("try")
+            }else{
+                setid(null);
+            }
+            console.log("wgat")
+            axios({
+                url: 'http://localhost:8080/api/v1/product/Type',
+                method: "Get",
+                
+                headers: {
+                    'content-type': 'application/json'
+                },
+                params:{  
+                    'Type':props.type,
+                    
+                }
+            })
+            .then(function (response) {
+                console.log(response);
+                setid(response.data)
+                console.log(response.data.length);
+                if(response.data.length === 0){
+                    respace("nothing")
+                    console.log("test")
+                }else{
+                    respace("have")
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+      
+    
+            });
+
+        }
+        
+    }
+
+    const reset =() =>{
+        setid(null);
+        
+    }
+    const respace =(props)=>{
+        setspace(props);
     }
 
     const submitHandler =(id,name,price) =>{
@@ -69,43 +130,48 @@ const Product_component =(props)=> {
     const notify = () => toast("Wow so easy!");
     return ( 
         <div>
-            <h2> 所有商品: </h2>
-        
-        <div id="products">
+            <h2> 商品類別: {props.type}</h2>
             
-            {/* {id === null? <Wait/> : '????'} */}
-           
-            {
-                id.map(
-                    id=>    
-                    <div>
-                        <Link to='/ProductPage' state={{productid: id.id, introduce: id.introduce,name:id.name,price:id.price}}>
-                            <div class="img-cover">
-                                <img  src={ `data:image/jpeg;base64,${id.image}`}   resizeMode="" alt=""/>
-                            </div>
-                        </Link>
-                            <div class="info">
-                                <div class="seller">{id.owner} (owner)</div>
-                                <div class="title">{id.name}</div>
-                            </div>
-                            <span style={{display: "flex"}}>
-                                <a onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } alt="" ><img src={require('../img/car.jpg')}alt="" style={{width:'4vw',height: '8vh'}}/></a>
-                                {/* <button className="btn1 up_btn"  style={{marginLeft: "10px"}} onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button> */}
-                                <p className="card-text price" style={{marginLeft: "140px"}}>{id.price} 元</p>
-                            </span>
+            <div id="products">
+                
+            
+                {/* {id === null? <Wait/> : '????'} */}
+            
+                {
+                    id !== null ?
+                        
+                        id.map(
+                            id=>    
                             
+                            <div>
+                                <Link to='/ProductPage' state={{productid: id.id, introduce: id.introduce,name:id.name,price:id.price}}>
+                                
+                                    <div class="img-cover">
+                                        <img  src={ `data:image/jpeg;base64,${id.image}`}   resizeMode="" alt=""/>
+                                    </div>
+                                </Link>
+                                    <div class="info">
+                                        <div class="seller">{id.owner} (owner)</div>
+                                        <div class="title">{id.name}</div>
+                                    </div>
+                                    <span style={{display: "flex"}}>
+                                        <a onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } alt="" ><img src={require('../img/car.jpg')}alt="" style={{width:'4vw',height: '8vh'}}/></a>
+                                        {/* <button className="btn1 up_btn"  style={{marginLeft: "10px"}} onClick={() => {submitHandler(id.id,id.name,id.price);notify() } } >加入購物車</button> */}
+                                        <p className="card-text price" style={{marginLeft: "140px"}}>{id.price} 元</p>
+                                    </span>
+                                    
+                                    
+                            </div>
                             
-                    </div>
-                    
 
-                )
+                        )
+                        : Wait()
+                }
+                {
+                    space !== "nothing" && id !== null? "" :<h2>暫無商品 </h2>
+                }
 
-
-
-
-            }
-
-</div>
+            </div>
         </div>
 
 

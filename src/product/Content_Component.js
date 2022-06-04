@@ -9,17 +9,18 @@ const Content_Component = (props) =>{
     // const user = props.user;
     const [id, setid] = useState([])
 
-    useEffect(() =>{
-        getservice()
-    },[])
+    const [Type, setType] = useState('all')
+    // useEffect(() =>{
+    //     getservice()
+    // },[])
 
-    const getservice = () =>{
+    // const getservice = () =>{
         
-        testservice.getservice().then((response) =>{
-            setid(response.data);
-            console.log(response.data)
-        })
-    }
+    //     testservice.getservice().then((response) =>{
+    //         setid(response.data);
+    //         console.log(response.data)
+    //     })
+    // }
    
     
     return ( 
@@ -29,15 +30,16 @@ const Content_Component = (props) =>{
             <div className="container-fluid">
                 <div className="row side-flex">
                     <div className="col-2">
+                        <a className="category_1" alt="" onClick={() => setType("all")}><h2>所有商品</h2></a>
                         <div className="list_category_flex side">
                         
                             <h2>分類(書籍)</h2>
                             <div className="list_category_flex">
-                                <a className="category_1" alt="" >財經投資</a>
-                                <a className="category_1" alt="" >語言學習</a>
-                                <a className="category_1" alt="" >行銷企管</a>
-                                <a className="category_1" alt="" >文學小說</a>
-                                <a className="category_1" alt="" >自然人文</a>
+                                <a className="category_1" alt="" onClick={() => setType("財經投資")}>財經投資</a>
+                                <a className="category_1" alt="" onClick={() => setType("語言學習")}>語言學習</a>
+                                <a className="category_1" alt="" onClick={() => setType("行銷企管")}>行銷企管</a>
+                                <a className="category_1" alt="" onClick={() => setType("文學小說")}>文學小說</a>
+                                <a className="category_1" alt="" onClick={() => setType("自然人文")}>自然人文</a>
                             </div>
                         </div>
 
@@ -45,11 +47,11 @@ const Content_Component = (props) =>{
                         
                             <h2>分類(雜誌)</h2>
                             <div className="list_category_flex">
-                                <a className="category_1" alt="" >中文雜誌</a>
-                                <a className="category_1" alt="" >英文雜誌</a>
-                                <a className="category_1" alt="">藝文雜誌</a>
-                                <a className="category_1" alt="" >外文雜誌</a>
-                                <a className="category_1" alt="" >商業週刊</a>
+                                <a className="category_1" alt="" onClick={() => setType("中文雜誌")}>中文雜誌</a>
+                                <a className="category_1" alt="" onClick={() => setType("英文雜誌")}>英文雜誌</a>
+                                <a className="category_1" alt="" onClick={() => setType("藝文雜誌")}>藝文雜誌</a>
+                                <a className="category_1" alt="" onClick={() => setType("語言學習")}>外文雜誌</a>
+                                <a className="category_1" alt="" onClick={() => setType("外文雜誌")}>商業週刊</a>
                             </div>
                         </div>
 
@@ -57,11 +59,11 @@ const Content_Component = (props) =>{
                         
                             <h2>分類(CD音樂)</h2>
                             <div className="list_category_flex">
-                                <a className="category_1" alt="" >古典音樂</a>
-                                <a className="category_1" alt="" >亞洲音樂</a>
-                                <a className="category_1" alt="" >西洋音樂</a>
-                                <a className="category_1" alt="" >爵士音樂</a>
-                                <a className="category_1" alt="" >黑膠唱片</a>
+                                <a className="category_1" alt="" onClick={() => setType("古典音樂")}>古典音樂</a>
+                                <a className="category_1" alt="" onClick={() => setType("亞洲音樂")}>亞洲音樂</a>
+                                <a className="category_1" alt="" onClick={() => setType("西洋音樂")}>西洋音樂</a>
+                                <a className="category_1" alt="" onClick={() => setType("爵士音樂")}>爵士音樂</a>
+                                <a className="category_1" alt="" onClick={() => setType("黑膠唱片")}>黑膠唱片</a>
                             </div>
                         </div>
                         <div className="side">
@@ -80,7 +82,7 @@ const Content_Component = (props) =>{
                     
                     <div className="col-10 ">
                         <div className="">
-                            <ProductComponent user = {props.user}className="row_product"/>
+                            <ProductComponent user = {props.user} type = {Type}className="row_product"/>
                         </div>
                         
                     </div>

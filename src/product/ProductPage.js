@@ -49,44 +49,7 @@ const ProduntPage =(props)=> {
                     The style that started it all. Never changed, but constantly improved. A modern reinterpretation of a classic tennis sneaker. This rendition is made from premium butter-soft suede. Instead of splitting the leather into three parts, we keep it in a thick, single layer. This enables us to use the entire leather hide, skipping the need to make a lining and delivering maximum comfort. A simple luxury.
                 </div>
                 <div id="review_comments">
-                    <div id="review_summary">
-                        <div class="review-summary-group">
-                            <div class="review-summary-bar">
-                                <div>5</div>
-                                <div class="review-summary-bar-line">
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="review-summary-bar">
-                                <div>4</div>
-                                <div class="review-summary-bar-line">
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="review-summary-bar">
-                                <div>3</div>
-                                <div class="review-summary-bar-line">
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="review-summary-bar">
-                                <div>2</div>
-                                <div class="review-summary-bar-line">
-                                    {/* <div style="transform: scaleX(0);"></div> */}
-                                </div>
-                            </div>
-                            <div class="review-summary-bar">
-                                <div>1</div>
-                                <div class="review-summary-bar-line">
-                                    {/* <div style="transform: scaleX(0);"></div> */}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-summary-text-group">
-                            <div class="review-summary-point">4.0</div>
-                            <div class="review-summary-count">三則評論</div>
-                        </div>
-                    </div>
+                    
                     
 
                     <ListComment state={productid} />
