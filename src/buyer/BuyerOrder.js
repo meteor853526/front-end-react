@@ -114,7 +114,7 @@ const BuyerOrder = (props) => {
             <table class="table" style={{backgroundColor:"white" ,width:"80vw"}}>
                 <thead style={{padding:"2px"}}>
                     <tr>
-                    <th scope="col">#</th>
+                   
                     <th scope="col">訂單編號</th>
                     
                    
@@ -125,7 +125,7 @@ const BuyerOrder = (props) => {
                     <th scope="col">商品編號</th>
                     <th scope="col">商品名稱</th>
                     <th scope="col">數量</th>
-                    <th scope="col">狀態</th>
+                    <th scope="col">訂單狀態</th>
                     </tr>
                 </thead>
                     <tbody>
@@ -134,7 +134,7 @@ const BuyerOrder = (props) => {
                             
                             id => 
                                 <tr>
-                                <th scope="row">1</th>
+                              
                                 <td>{id.id}</td>
                                 
                             
@@ -146,7 +146,7 @@ const BuyerOrder = (props) => {
                                 <td>{id.productname}</td>
                                 <td>{id.number}</td>
                                 <td style={{color: 'red'}}>{id.state}</td>
-                                <button class="btn btn-outline-success" onClick={() => changeHandler(id.id)}>收貨</button>
+                                <button class="btn btn-outline-success" onClick={() => changeHandler(id.id)}>點擊收貨</button>
                                 </tr>
                                 
                             
@@ -159,7 +159,7 @@ const BuyerOrder = (props) => {
             <table class="table" style={{backgroundColor:"white",width:"80vw"}}>
                 <thead style={{padding:"2px"}}>
                     <tr>
-                    <th scope="col">#</th>
+                
                     <th scope="col">訂單編號</th>
                     
                    
@@ -179,7 +179,7 @@ const BuyerOrder = (props) => {
                             
                             id2 => 
                                 <tr>
-                                <th scope="row">1</th>
+                            
                                 <td>{id2.id}</td>
                                 
                             

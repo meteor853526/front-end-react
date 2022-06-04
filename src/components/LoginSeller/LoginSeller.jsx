@@ -55,10 +55,8 @@ useEffect(() => {
         <div className='main-login'>
                 <div className="login-contain">
                  <div className="left-side">
-                         <div className="img-class">
-                              <img src={logo} id="img-id" alt="" />
-                          </div>
-                        <h5>???????????????</h5>
+                         
+                        
                         <form onSubmit={handlesubmit}>
                         <label htmlFor="emil1">Email</label>
                             <input placeholder="Enter your email..." type="email" value={emailval} 
@@ -67,7 +65,7 @@ useEffect(() => {
                             <input placeholder="Enter password" type="password" autoComplete="false"
                             value={passval} onChange={(e)=>{setpassval(e.target.value)}}
                              id="pwd1"/>
-                            <button type="submit" id="sub_butt">Login</button>
+                            <button type="submit" id="sub_butt" className="move">Login</button>
                          </form>
 
                          <div className="footer">

@@ -437,3 +437,11 @@ color:#fff;border-radius:10px;
   border-style : solid ; 
   border-color : white white white white ; 
 }
+.img-class{
+  display:flex;
+  justify-self: center;
+  margin-left: 12vw;
+}
+.move{
+  margin-left:3.7vw
+}
