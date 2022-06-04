@@ -130,7 +130,7 @@ input[type="checkbox"]:checked+label {
     content: '';
     width: 50%;
     height: 1px;
-    background-color: #fff;
+   
     position: absolute;
     bottom: 10px;
     left: 25%;

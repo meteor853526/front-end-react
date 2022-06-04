@@ -118,7 +118,7 @@ input[type="checkbox"]:checked+label {
     width: 100%;
     padding: 20px 23px;
     border: 0;
-    color: #fff;
+    /* color: #fff; */
     cursor: pointer;
     text-align: center;
     transition: box-shadow 0.3s;

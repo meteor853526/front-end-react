@@ -25,6 +25,7 @@ import BuyerCenter from './buyer/BuyerCenter'
 import BuyerOrder from './buyer/BuyerOrder'
 import ListComment from './product/ListComment'
 import ProductPage from './product/ProductPage'
+import SellerHistory from './sell/SellerHistory'
 import {
   BrowserRouter as Router,
   Routes,
@@ -58,7 +59,7 @@ function App() {
               <Route path="/buyerCenter" element={state.user ? <BuyerCenter user={state}/> : <Login/>}/>
               <Route path="/SellerProduct" element={<SellerProduct user={state2}/>}/>
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
-
+              <Route path="/SellerHistory" element={<SellerHistory user={state2}/>}/>
               <Route path="/loginSeller" element={state2.user2 ?  <Seller user={state2}/> : <LoginSeller/> } />
 
               <Route path="/RegisterSeller" element={<RegisterSeller/>} />

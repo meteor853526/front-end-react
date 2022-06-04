@@ -4,14 +4,14 @@ import { Link,useNavigate } from "react-router-dom";
 import React,{Component} from "react";
 import ReactDOM from 'react-dom';
 import { useEffect, useState,useRef  } from "react";
-import BuyerNav from './BuyerNav'
+
 import moment from 'moment';
-import Comment from './Comment'
+
 import { render } from '@testing-library/react';
 import ReactStars from "react-rating-stars-component";
 const $ = require('jquery')
 $.DataTable = require('datatables.net')
-const Buyer = (props) => {
+const SellerHistory = (props) => {
     let history=useNavigate();
     console.log(props.user.user)
     const [id, setid] = useState([])
@@ -134,7 +134,7 @@ const Buyer = (props) => {
             }
         })
         .then(function (res) {
-            alert('填寫成功')
+            
             axios({
                 url: 'http://localhost:8080/api/v1/Order/history',
                 method: "GET",
@@ -175,12 +175,11 @@ const Buyer = (props) => {
             <div className="">
             
             <h5>歷史訂單</h5>
-            <BuyerNav/>
-            <div style={{backgroundColor:"white" ,width:"85vw", margin:"15px"}}>
-                <table className="display" width="85vw" style={{backgroundColor:"white" ,width:"80vw"}} ref={ tableRef }></table>
-            </div>
-            <button type="button" style={{display:"none"}}>
-                nothing
+            
+            <table className="display" width="80vw" ref={ tableRef }></table>
+           
+            <button type="button" >
+            Launch demo modal
             </button>
 
            
@@ -192,13 +191,13 @@ const Buyer = (props) => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <ReactStars
+                    {/* <ReactStars
                         count={5}
                         onChange={ratingChanged}
                         size={24}
                         activeColor="#ffd700"
                     />
-                    <h6>填寫評論</h6>
+                    <h6>填寫評論</h6> */}
                 <textarea value ={content}onChange={(e)=>{setcontent(e.target.value)}}></textarea>
                 </div>
                 <div class="modal-footer">
@@ -268,4 +267,4 @@ const Buyer = (props) => {
 
      );
 }
-export default Buyer;
+export default SellerHistory;

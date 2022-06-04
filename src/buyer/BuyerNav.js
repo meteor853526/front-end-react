@@ -22,13 +22,13 @@ const Buyer_nav = (props) => {
      
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" />
-            <Link to="/buyerCenter"><label class="btn btn-outline-primary" for="btnradio1">Radio 1</label></Link>
+            <Link to="/buyerCenter"><label class="btn btn-primary some-class" for="btnradio1" style={{padding:"20px"}}>個人資訊</label></Link>
 
             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-            <Link to="/buyer"><label class="btn btn-outline-primary" for="btnradio2">Radio 2</label></Link>
+            <Link to="/buyer"><label class="btn btn-primary some-class" for="btnradio2">歷史訂單</label></Link>
 
             <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
-            <Link to="/BuyerOrder"><label class="btn btn-outline-primary" for="btnradio3">Radio 3</label></Link>
+            <Link to="/BuyerOrder"><label class="btn btn-primary some-class" for="btnradio3">當前訂單</label></Link>
             </div>
   
         

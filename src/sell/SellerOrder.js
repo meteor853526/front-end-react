@@ -91,9 +91,9 @@ const SellerOrder = (props) => {
                 </div>
             </div>
         
-        <div className="row_product">
+        <div className="row_product" style={{display: 'flex',flexDirection: 'column'}}>
             <h2>當前訂單</h2>
-            <table class="table">
+            <table class="table" style={{backgroundColor:"white" ,width:"90vw"}}>
                 <thead>
                     <tr>
                     <th scope="col">#</th>
