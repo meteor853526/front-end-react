@@ -20,7 +20,7 @@ const Seller = (props) => {
                     <div className="card" >
                         {/* <img src={require('./img/test.jpg')} alt="Background"/> */}
                         <div className="card-body">
-                            <h5 className="card-title">上架商品</h5>
+                            <h5 className="card-title">個人商品</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <Link to="/SellerProduct" className="btn1"><button className="btn1">點擊</button></Link>
                             

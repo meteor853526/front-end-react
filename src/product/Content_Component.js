@@ -50,8 +50,8 @@ const Content_Component = (props) =>{
                                 <a className="category_1" alt="" onClick={() => setType("中文雜誌")}>中文雜誌</a>
                                 <a className="category_1" alt="" onClick={() => setType("英文雜誌")}>英文雜誌</a>
                                 <a className="category_1" alt="" onClick={() => setType("藝文雜誌")}>藝文雜誌</a>
-                                <a className="category_1" alt="" onClick={() => setType("語言學習")}>外文雜誌</a>
-                                <a className="category_1" alt="" onClick={() => setType("外文雜誌")}>商業週刊</a>
+                                <a className="category_1" alt="" onClick={() => setType("外文雜誌")}>外文雜誌</a>
+                                <a className="category_1" alt="" onClick={() => setType("商業週刊")}>商業週刊</a>
                             </div>
                         </div>
 

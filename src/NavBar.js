@@ -12,6 +12,8 @@ const NavBar = (props) => {
     // console.log(user.user);
     const stateURL = user.user? "/logout" :"/login"
     
+    
+
     const [url , seturl ] = useState("/list_car")
     
     const check = () =>{

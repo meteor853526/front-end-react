@@ -253,7 +253,7 @@ body {
 #products .img-cover>img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: auto;
   transform-origin: center;
   transition: transform 0.5s;
 }

@@ -126,6 +126,7 @@ const BuyerOrder = (props) => {
                     <th scope="col">商品名稱</th>
                     <th scope="col">數量</th>
                     <th scope="col">訂單狀態</th>
+                    <th scope="col">功能</th>
                     </tr>
                 </thead>
                     <tbody>

@@ -47,8 +47,8 @@ const SellerProduct = (props) => {
                 </div>
                 </div>
             </div>
-            <Link to="/AddProduct" className="btn1"><button className="btn1">上架商品</button></Link>
-        
+            <Link to="/AddProduct" className="btn1"><button className="btn1">新增商品</button></Link>
+            <h2 style={{marginTop:"50px"}}>當前已上架的商品:</h2>
             <div id="products">
                 
                 {

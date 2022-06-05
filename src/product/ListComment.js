@@ -8,7 +8,7 @@ import ReactStars from "react-rating-stars-component";
 const ListComment =()=> {
     var count = 0;
     var total = 0;
-    var stars = 0;
+    var st = 0;
     const location = useLocation();
     const { productid } = location.state;
     console.log(productid); // output: "the-page-id"
@@ -49,28 +49,12 @@ const ListComment =()=> {
 
                     <div style={{display:"none"}}>{count += 1}</div>
                     <div style={{display:"none"}}>{total += id.star}</div>
-                    <div >{stars = (total/count)}</div>
+                    
                 </div>
             )
         }
-        <div id="review_summary">
-            <ReactStars
-                count={5}
-                value={stars}
-                edit={false}
-                size={38}
-                activeColor="#ffd700"
-            />
-            <div class="review-summary-group">
-                            
-            </div>
-            <div class="review-summary-text-group">
-                
-            <div class="review-summary-point">{}</div>
-            
-                <div class="review-summary-count">{count}則評論</div>
-            </div>
-        </div>
+        
+        <div class="review-summary-count"><div style={{color: 'red'}}>平均評分{st = (total/count)}</div>{count}則評論</div>
     {
         id.map(
             id=>

@@ -142,7 +142,7 @@ const Check_type =() =>{
                                 </div>
                             </li>  
                         </ul>
-                        <h5>{pay_type}</h5>
+                
 
                         <Link to='/Data_page'
                             state={{ pay_type : pay_type, delivery_type:delivery_type }} className="cus_btn"><button type="submit" className="cus_btn">填寫配送資料</button></Link>

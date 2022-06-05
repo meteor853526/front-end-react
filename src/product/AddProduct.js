@@ -11,9 +11,9 @@ class AddProduct extends Component {
         this.state = {
             name:'',
             category: "書籍",
-            price: 1,
+            price: null,
             type: "財經投資",
-            number: 1,
+            number: null,
             introduce:'',
             file:'',
             owner:this.props.user.user2,
