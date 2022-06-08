@@ -1,16 +1,9 @@
-import { Link,useNavigate } from "react-router-dom";
-import React,{Component} from "react";
+import { Link} from "react-router-dom";
+import React from "react";
 import { useEffect, useState } from "react";
-import shop_service from "../services/shop_service";
-import axios from 'axios';
-import FormData from 'form-data'
-import CheckType from "./Check_type";
 
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-  } from "react-router-dom";
+import axios from 'axios';
+
 var count = 0
 
 function Hidden(){

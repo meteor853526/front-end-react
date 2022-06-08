@@ -1,20 +1,13 @@
-
 import axios from 'axios';
-import { Link,useNavigate } from "react-router-dom";
-import React,{Component} from "react";
-import { useEffect, useState,useRef  } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 import BuyerNav from './BuyerNav'
-const $ = require('jquery')
-$.DataTable = require('datatables.net')
 const BuyerOrder = (props) => {
-    let history=useNavigate();
+
     const [id, setid] = useState([])
     const [id2, setid2] = useState([])
     console.log(props.user)
-    const tableRef = useRef()
-    
-    
-
+   
     useEffect(() =>{
         // getservice()
         axios({
@@ -92,8 +85,6 @@ const BuyerOrder = (props) => {
                 console.log(error);
             });
          
-       
-            //history('/buyer')
         })
         .catch(function (error) {
             console.log(error);
@@ -105,10 +96,6 @@ const BuyerOrder = (props) => {
     return ( 
         <div className="row_product " style={{display: 'flex',flexDirection: 'column'}}>
             <BuyerNav/>
-            
-
-
-
 
             <h2>賣家已出貨: </h2>
             <table class="table" style={{backgroundColor:"white" ,width:"80vw"}}>
@@ -116,8 +103,6 @@ const BuyerOrder = (props) => {
                     <tr>
                    
                     <th scope="col">訂單編號</th>
-                    
-                   
                     <th scope="col">收貨地址</th>
                     <th scope="col">送貨方式</th>
                     <th scope="col">結帳方式</th>
@@ -135,10 +120,7 @@ const BuyerOrder = (props) => {
                             
                             id => 
                                 <tr>
-                              
                                 <td>{id.id}</td>
-                                
-                            
                                 <td>{id.address}</td>
                                 <td>{id.type}</td>
                                 <td>{id.pay_type}</td>
@@ -149,10 +131,8 @@ const BuyerOrder = (props) => {
                                 <td style={{color: 'red'}}>{id.state}</td>
                                 <button class="btn btn-outline-success" onClick={() => changeHandler(id.id)}>點擊收貨</button>
                                 </tr>
-                                
-                            
-                        )
-                    }
+                            )
+                        }
                         
                     </tbody>
             </table>
@@ -180,10 +160,7 @@ const BuyerOrder = (props) => {
                             
                             id2 => 
                                 <tr>
-                            
                                 <td>{id2.id}</td>
-                                
-                            
                                 <td>{id2.address}</td>
                                 <td>{id2.type}</td>
                                 <td>{id2.pay_type}</td>
@@ -194,23 +171,11 @@ const BuyerOrder = (props) => {
                                 <td style={{color: 'red'}}>{id2.state}</td>
                                
                                 </tr>
-                                
-                            
                         )
                     }
-                        
                     </tbody>
-            </table>
-
-    
-            
-            
-            
+            </table>          
         </div>
-        
-        
-        
-
 
      );
 }

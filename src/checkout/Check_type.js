@@ -1,6 +1,6 @@
-import { Link ,useLocation} from "react-router-dom";
-import React,{Component} from "react";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import React from "react";
+import { useState } from "react";
 
 
 const Check_type =() =>{
@@ -8,34 +8,9 @@ const Check_type =() =>{
 
     const [pay_type, setpay_type] = useState()
     const [delivery_type, setdelivery_type] = useState()
-    
-
-    
-    //navigate = useNavigate();
-    // const changeHandler1 =(value) =>{
-    //     setpay_type(value);
-    //     //this.setState({[e.target.name]: e.target.value});
-    //     console.log(value)
-    //     console.log(value)
-    // }
-    const changeHandler2 =(e) =>{
-        // this.setState({[e.target.name]: e.target.value});
-        //this.setState({[e.target.name]: e.target.value});
-        // console.log(e.target.name)
-        // console.log(e.target.value)
-    }
-
-    const submitHandler = () => {
-        alert('????????')
-    }
-   
-    
         
     return ( 
         <div>
-
-       
-        
         <div class="all" style={{"width":"500px"}}>
             <h2>選擇結帳方式</h2>
             

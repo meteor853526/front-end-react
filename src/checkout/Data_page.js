@@ -1,10 +1,10 @@
-import { Link,useLocation,useNavigate } from "react-router-dom";
-import React,{Component} from "react";
+import { useLocation,useNavigate } from "react-router-dom";
+import React from "react";
 import axios from 'axios';
-import FormData from 'form-data'
+
 import moment from 'moment';
 import { useEffect, useState } from "react";
-import testservice from '../services/testservice';
+
 
 const DataPage = (props) => {
     const location = useLocation()
@@ -14,8 +14,7 @@ const DataPage = (props) => {
     const [Lname, setLname] = useState()
     const [phone, setphone] = useState()
     const [address, setaddress] = useState()
-    const [time, settime] = useState()
-    const [productid, setproductid] = useState()
+ 
     var count = 0
     
 
@@ -84,11 +83,7 @@ const DataPage = (props) => {
         });
         
     }
-    // if(Fname === '' || Lname === '' || phone === '' || address === ''){
-    //     document.getElementById('switch').style.display = 'none';
-    // }else{
-    //     document.getElementById('switch').style.display = 'flex';
-    // }
+   
     
        
         

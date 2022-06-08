@@ -1,18 +1,14 @@
-
 import axios from 'axios';
-import { Link,useNavigate } from "react-router-dom";
-import React,{Component} from "react";
-import ReactDOM from 'react-dom';
+import React from "react";
 import { useEffect, useState,useRef  } from "react";
 import BuyerNav from './BuyerNav'
 import moment from 'moment';
-import Comment from './Comment'
-import { render } from '@testing-library/react';
+
 import ReactStars from "react-rating-stars-component";
 const $ = require('jquery')
 $.DataTable = require('datatables.net')
 const Buyer = (props) => {
-    let history=useNavigate();
+    
     console.log(props.user.user)
     const [id, setid] = useState([])
     const [orderid, setorderid] = useState()
@@ -25,9 +21,7 @@ const Buyer = (props) => {
 
     
     useEffect(() =>{
-        // getservice()
-        
-        
+
         axios({
             url: 'http://localhost:8080/api/v1/Order/history',
             method: "GET",
@@ -40,21 +34,15 @@ const Buyer = (props) => {
         })
         .then(function (res) {
            
-
             console.log(res.data)
             console.log("??" + props.user.user)
-            // console.log(res.data)
-            // console.log(tableRef.current)
             setid(res.data);
-    
             
         })
         .catch(function (error) {
             console.log(error);
         });
         
-    // // Extra step to do extra clean-up.
-
     },[])
 
     var count = -1;
@@ -73,14 +61,13 @@ const Buyer = (props) => {
                     { data : "評論",
                         render:function(data,type,row){
                             
-                            //console.log(res.data[2][6])
+                      
                             count++;
                             count = (count) % id.length
                             
                             if(id[count][7] === "買方已收貨"){
 
-                                // console.log(res.data)
-                                // console.log(count)
+                              
                                 return '<button id="'+id[count][0]+'" type="button" value="'+id[count][1]+'"class="btn btn-primary some-class" data-bs-toggle="modal" data-bs-target="#exampleModal">填寫評論</button>'
                             }else{
                                 return '<h6 style={{color: "red"}}>訂單完成</h6>'
@@ -96,23 +83,13 @@ const Buyer = (props) => {
                 
         },
         $(document).on('click', '.some-class', function(event){ 
-            // submitHandler()
-            //alert(event.target.value)
+        
             setorderid(event.target.id)
             setvalue(event.target.value)
-            //console.log(event.target.value)
+          
         }),
-        //console.log(id),
-        
-        
-
-        
+    
     )
-        // return function() {
-        //     // console.log("Table destroyed")
-        //     table.destroy()
-        // }
-
 
 
     const submitHandler = () =>{
@@ -147,7 +124,7 @@ const Buyer = (props) => {
             })
             .then(function (res) {
                 setid(res.data);
-                //console.log(res.data);
+           
         
             })
             .catch(function (error) {

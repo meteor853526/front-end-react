@@ -1,14 +1,11 @@
-import { Link } from "react-router-dom";
-import React,{Component} from "react";
+import React from "react";
 import axios from 'axios';
-import FormData from 'form-data'
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 const ListComment =()=> {
     var count = 0;
     var total = 0;
-    var st = 0;
     const location = useLocation();
     const { productid } = location.state;
     console.log(productid); // output: "the-page-id"
@@ -54,7 +51,7 @@ const ListComment =()=> {
             )
         }
         
-        <div class="review-summary-count"><div style={{color: 'red'}}>平均評分{st = (total/count)}</div>{count}則評論</div>
+        <div class="review-summary-count"><div style={{color: 'red'}}>平均評分{(total/count)}</div>{count}則評論</div>
     {
         id.map(
             id=>

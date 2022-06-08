@@ -1,27 +1,12 @@
-
-import axios from 'axios';
-import { Link,useNavigate } from "react-router-dom";
-import React,{Component} from "react";
-
+import React from "react";
 import BuyerNav from './BuyerNav'
 
-const BuyerCenter = (props) => {
-  
+const BuyerCenter = () => {
 
     return ( 
         <div className="row_product">
-            <BuyerNav/>
-
-
-
-
-            
+            <BuyerNav/>        
         </div>
-        
-        
-        
-
-
      );
 }
 export default BuyerCenter;

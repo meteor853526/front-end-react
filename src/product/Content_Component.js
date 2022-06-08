@@ -1,28 +1,10 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {  useState } from "react";
 import React from 'react';
-import testservice from '../services/testservice';
 import ProductComponent from './ProductComponent.js';
-
-
 const Content_Component = (props) =>{
-    // const user = props.user;
-    const [id, setid] = useState([])
-
+ 
     const [Type, setType] = useState('all')
-    // useEffect(() =>{
-    //     getservice()
-    // },[])
-
-    // const getservice = () =>{
-        
-    //     testservice.getservice().then((response) =>{
-    //         setid(response.data);
-    //         console.log(response.data)
-    //     })
-    // }
    
-    
     return ( 
 
 

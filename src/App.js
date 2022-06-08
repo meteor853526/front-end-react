@@ -1,11 +1,7 @@
 
 //import './App.css';
 import NavBar from './NavBar';
-import NavBar_2 from './NavBar_2';
-import Card from './Card';
 import Car from './Car';
-import Category from './Category';
-import Content from './Content';
 import ContentComponent from './product/Content_Component.js'
 import AddProduct from './product/AddProduct.js'
 import Login from './components/Login/Login';
@@ -45,7 +41,6 @@ function App() {
       <Router>
         <NavBar user={state} tp={state2}/>
         <div className="all" >
-          
           <Routes>
               <Route path="/" element={<Car/>}/>
               <Route path="/product" element={<ContentComponent user={state}/>}/>
@@ -53,7 +48,6 @@ function App() {
               <Route path="/ListComment" element={<ListComment/>}/>
               <Route path="/ProductPage" element={<ProductPage/>}/>
               <Route path="/Seller" element={state2.user2 ? <Seller user={state2}/> : <LoginSeller/>}/>
-
               <Route path="/BuyerOrder" element={state.user ? <BuyerOrder user={state}/> : <Login/>}/>
               <Route path="/buyer" element={state.user ? <Buyer user={state}/> : <Login/>}/>
               <Route path="/buyerCenter" element={state.user ? <BuyerCenter user={state}/> : <Login/>}/>
@@ -61,22 +55,15 @@ function App() {
               <Route path="/SellerOrder" element={<SellerOrder user={state2}/>}/>
               <Route path="/SellerHistory" element={<SellerHistory user={state2}/>}/>
               <Route path="/loginSeller" element={state2.user2 ?  <Seller user={state2}/> : <LoginSeller/> } />
-
               <Route path="/RegisterSeller" element={<RegisterSeller/>} />
               <Route path="/Check_type" element={state.user ?<CheckType/> : <Login/>}/>
               <Route path="/Data_page" element={state.user ? <DataPage  user={state} /> : <Login/>}/>
-
               <Route path="/login" element={state.user ? <Home/> : <Login/>}/>
               <Route path="/list_car" element={state.user ? <ShopCar user={state}/>  : <Login/>}/>
               {/* <NavBar user={state}/> */}
               {/* {users ? <Home/> : <Login/>} 
               {state.user ? <Home/> : <Login/> } */}
-
-              
               <Route path="/Register"element={<Register/>} />
-                
-                
-              
           </Routes>
         </div>
       </Router>
